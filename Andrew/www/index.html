@@ -35,8 +35,19 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+				<p>
+					<button type="button" onclick="openCamera()">Take a photo</button>
+				</p>
             </div>
         </div>
+		<script type="text/javascript" src="camera.js"></script>
+		<script>
+		function openCamera() {
+			navigator.camera.getPicture(function(imageURI) {
+			}, function(err) {
+			}, cameraOptions);
+		}
+		</script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
