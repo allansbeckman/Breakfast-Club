@@ -24,6 +24,36 @@
         /* button  Button */
     
     
+        /* button  Edit */
+    $(document).on("click", ".uib_w_39", function(evt)
+    {
+         activate_subpage("#page_68_98"); 
+    });
+    
+        /* listitem  Home 1 */
+    $(document).on("click", ".uib_w_41", function(evt)
+    {
+         activate_subpage("#ilm_opportunity_pop_up"); 
+    });
+    
+        /* listitem  Home 2 */
+    $(document).on("click", ".uib_w_42", function(evt)
+    {
+         activate_subpage("#ilm_opportunity_pop_up"); 
+    });
+    
+        /* listitem  Home 3 */
+    $(document).on("click", ".uib_w_43", function(evt)
+    {
+         activate_subpage("#ilm_opportunity_pop_up"); 
+    });
+    
+        /* button  ILM */
+    $(document).on("click", ".uib_w_58", function(evt)
+    {
+         activate_subpage("#page_68_98"); 
+    });
+    
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
