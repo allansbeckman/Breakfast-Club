@@ -22,10 +22,7 @@
     });
     
         /* button  Button */
-    $(document).on("click", ".uib_w_18", function(evt)
-    {
-         activate_subpage("#page_70_42"); 
-    });
+    
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);

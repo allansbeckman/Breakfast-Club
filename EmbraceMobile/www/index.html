@@ -87,6 +87,15 @@
 
             <h1></h1>
         </header>
+        <header class="wrapping-col wrap-element uib_w_19" data-uib="app_framework/header" data-ver="2" id="af-header-1">
+            <h1>Activity Feed</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_24 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
+            <h1>"Activity Title"</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_32" data-uib="app_framework/header" data-ver="2" id="af-header-3">
+            <h1>Investor Profile</h1>
+        </header>
         <div id="content" class="uwrap">
             <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0">
                 <figure class="figure-align">
@@ -127,7 +136,7 @@
                         <div class="uib-grid widget uib_w_17 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="0">
                             <div class="uib-grid-row">
                                 <div class="uib-grid-cell widget-container">
-                                    <a class="button widget uib_w_18 d-margins" data-uib="app_framework/button" data-ver="1">Button</a>
+                                    <a class="button widget uib_w_18 d-margins" data-uib="app_framework/button" data-ver="1" href="#activity_feed" data-transition="fade">Button</a>
                                 </div>
                                 <div class="uib-grid-cell widget-container"></div>
                                 <div class="uib-grid-cell widget-container"></div>
@@ -145,6 +154,67 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+            <div class="upage vertical-col panel" id="activity_feed" data-header="af-header-1" data-footer="none">
+                <ul class="list widget uib_w_20 d-margins" data-uib="app_framework/listview" data-ver="1">
+                    <li class="widget uib_w_21" data-uib="app_framework/listitem" data-ver="1">
+                        <a class="" data-transition="fade" href="#activity_details">
+                            <p style="font-size:12px">2/1/15</p>
+                            <br>EMD Paid</a>
+                    </li>
+                    <li class="widget uib_w_22" data-uib="app_framework/listitem" data-ver="1">
+                        <a class="" href="#activity_details" data-transition="fade">
+                            <p style="font-size:12px">1/2/15</p>
+                            <br>Counter Offer</a>
+                    </li>
+                    <li class="widget uib_w_23" data-uib="app_framework/listitem" data-ver="1">
+                        <a class="" href="#activity_details" data-transition="fade">
+                            <p style="font-size:12px">1/7/15</p>
+                            <br>House in Closing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col panel" id="activity_details" data-header="af-header-2" data-footer="none">
+
+                <div class="widget uib_w_26 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>MM/DD/YYYY</p>
+                    </div>
+                </div>
+
+                <div class="widget uib_w_27 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Activity Description............</p>
+                    </div>
+                </div>
+                <ul class="list widget uib_w_28 d-margins" data-uib="app_framework/listview" data-ver="1">
+                    <li class="widget uib_w_29" data-uib="app_framework/listitem" data-ver="1"><a class="icon message">Comment 1</a>
+                    </li>
+
+                </ul>
+                <div class="table-thing with-label widget uib_w_30 d-margins" data-uib="app_framework/input" data-ver="1">
+
+                    <input class="wide-control" placeholder="Write a Comment" type="text">
+                </div>
+                <a class="button widget uib_w_31 d-margins" data-uib="app_framework/button" data-ver="1">Post Comment</a>
+            </div>
+            <div class="upage vertical-col left panel" id="investor_profile_page" data-header="af-header-3" data-footer="none">
+
+                <div class="sbs-container widget uib_w_33 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container"> <p>Interested Locations</p> </div>
+                    <div class="rightContent widget-container">p>Investment Amount</p></div>
+                </div>
+                <div class="widget uib_w_34 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>&nbsp;</p>
+                    </div>
                 </div>
             </div>
         </div>
