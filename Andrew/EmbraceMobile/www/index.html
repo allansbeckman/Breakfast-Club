@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+    <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+    <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+    <!-- Most third-party libraries should go here. References (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/mc/hammer.js"></script> -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+    <!-- phantom library, needed for Intel XDK "legacy" container api calls -->
+    <!-- phantom library, needed for Cordova api calls -->
+    <!-- phantom library, needed for Intel XDK "legacy" container CORS -->
+    <!-- for your event code, see README and file comments for details -->
+    <!-- for your init code, see README and file comments for details -->
+    <!-- normalizes device and document ready events, see file for details -->
+    <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+    <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+    <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Blank App Designer Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Most third-party libraries should go here. References (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <script src="intelxdk.js"></script>
+        <!-- phantom library, needed for Intel XDK "legacy" container api calls -->
+        <script src="cordova.js"></script>
+        <!-- phantom library, needed for Cordova api calls -->
+        <script src="xhr.js"></script>
+        <!-- phantom library, needed for Intel XDK "legacy" container CORS -->
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+    </head>
+    <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+    <body id="afui" class="">
+
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <header class="wrapping-col wrap-element uib_w_16" data-uib="app_framework/header" data-ver="2" id="af-header-0">
+
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_22 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-1"><a class="button backButton">Back</a>
+            <h1>Email</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_32 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
+            <h1>Todd Packer</h1>
+        </header>
+
+        <header class="wrapping-col wrap-element uib_w_47 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-3"><a class="button backButton">Back</a>
+            <h1>Tasks</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_47 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-4"><a class="button backButton">Back</a>
+            <h1>Message Feed</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_49 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-5"><a class="button backButton">Back</a>
+            <h1>Ron Swanson</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_56 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-6"><a class="button backButton">Back</a>
+            <h1>Register For Home Union Account</h1>
+        </header>
+        <div id="content" class="uwrap">
+            <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                    <img src="images/Strabburg.homeunion">
+                    <figcaption data-position="bottom"></figcaption>
+                </figure>
+            </div>
+            <div class="upage vertical-col panel AppBackground" id="mainpage" data-header="none" data-footer="none">
+                <div class="widget uib_w_3 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/logo.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="widget uib_w_5 d-margins HeadingText" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Login to your account</p>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_6 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Username" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <input class="wide-control" placeholder="Password" type="text">
+                </div>
+                <div class="widget uib_w_8 d-margins" data-uib="app_framework/checkbox" data-ver="1">
+                    <input type="checkbox" id="af-checkbox-0">
+                    <label class="content-box" for="af-checkbox-0">Remember Me</label>
+                </div><a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1" href="#landingPage" data-transition="fade">Login</a>
+            </div>
+            <div class="upage panel" id="landingPage" data-header="af-header-0" data-footer="none">
+
+                <div class="upage-outer">
+                    <div class="upage-content content-area vertical-col" id="page_70_42">
+
+                        <div class="uib-grid widget uib_w_17 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="0">
+
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container">
+                                    <a class="button widget uib_w_20 d-margins icon mail slate" data-uib="app_framework/button" data-ver="1" href="#Email" data-transition="fade"></a>
+                                </div>
+                                <div class="uib-grid-cell widget-container">
+                                    <a class="button widget uib_w_21 d-margins smaller icon chat red" data-uib="app_framework/button" data-ver="1" href="#MessagesStart" data-transition="fade"></a>
+                                </div>
+
+                            </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container">
+                                    <a class="button widget uib_w_46 d-margins icon check slate" data-uib="app_framework/button" data-ver="1" href="#TasksStart" data-transition="fade"></a>
+                                </div>
+                                <div class="uib-grid-cell widget-container">
+                                    <a class="button widget uib_w_19 d-margins icon html5 green" data-uib="app_framework/button" data-ver="1" href="#AndrewHTML5Adventure" data-transition="fade"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="upage vertical-col left panel" id="AndrewHTML5Adventure" data-header="none" data-footer="none">
+
+                <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+                <input align="center" id="color" value="red">Polygon Color
+                <input align="center" id="color2" value="black">Vertex Color
+            </div>
+            <div class="upage vertical-col panel" id="Email" data-header="af-header-1" data-footer="none">
+                <div class="table-thing with-label widget uib_w_23 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">To:</label>
+
+                    <input class="wide-control" type="text">
+                </div>
+
+                <div class="table-thing with-label widget uib_w_25 d-margins" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Subject:</label>
+
+                    <input class="wide-control" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_26 d-margins" data-uib="app_framework/textarea" data-ver="1">
+                    <label class="narrow-control label-top-left">Message:</label>
+
+                    <textarea class="wide-control" rows="10" wrap="soft"></textarea>
+                </div>
+                <a class="button widget uib_w_27 icon right" data-uib="app_framework/button" data-ver="1">Send</a>
+            </div>
+            <div class="upage vertical-col panel AppBackground" id="Comments" data-header="af-header-2" data-footer="none">
+
+                <div class="widget uib_w_48 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Property Comment:</p>
+                        <p>Address: 5148 Benson St.</p>
+                        <p>Irvine, CA 92617</p>
+                        <p>&nbsp;</p>
+                        <p>Comment:</p>
+                        <p>This needs to be painted. It has obviously not been painted in at least a decade.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_53 d-margins" data-uib="app_framework/textarea" data-ver="1">
+                    <label class="narrow-control label-top-left">Reply to comment:</label>
+
+                    <textarea class="wide-control" rows="4" wrap="soft"></textarea>
+                </div>
+                <a class="button widget uib_w_54 icon right" data-uib="app_framework/button" data-ver="1">Reply</a>
+            </div>
+            <div class="upage vertical-col panel" id="MessagesStart" data-header="af-header-4" data-footer="none">
+                <ul class="list widget uib_w_36 d-margins" data-uib="app_framework/listview" data-ver="1">
+                    <li class="widget uib_w_37" data-uib="app_framework/listitem" data-ver="1">
+                        <a href="#Comments" data-transition="fade" class="icon message">
+                            <br>5:15pm
+                            <br>Todd Packer Added a comment on your property
+                            <br>"This needs to be painted..."</a>
+                    </li>
+                    <li class="widget uib_w_38" data-uib="app_framework/listitem" data-ver="1">
+                        <a class="icon camera" href="#RonsPhoto" data-transition="fade">
+                            <br>8:09am
+                            <br>Ron Swanson Added a photo to your property
+                            <br>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col panel" id="TasksStart" data-header="af-header-3" data-footer="none">
+                <ul class="list widget uib_w_36 d-margins" data-uib="app_framework/listview" data-ver="1">
+                    <li class="widget uib_w_37" data-uib="app_framework/listitem" data-ver="1"><a href="#RegisterForAccount" data-transition="fade">Register for Home Union Account</a>
+                    </li>
+                    <li class="widget uib_w_38" data-uib="app_framework/listitem" data-ver="1"><a>Call Mom</a>
+                    </li>
+                    <li class="widget uib_w_39" data-uib="app_framework/listitem" data-ver="1"><a>Send a fax to the dinos</a>
+                    </li>
+                    <li class="widget uib_w_40" data-uib="app_framework/listitem" data-ver="1"><a>Save the world</a>
+                    </li>
+                    <li class="widget uib_w_41" data-uib="app_framework/listitem" data-ver="1"><a>Take photos of broken water heater</a>
+                    </li>
+                    <li class="widget uib_w_42" data-uib="app_framework/listitem" data-ver="1"><a>Contact Bob for special offer</a>
+                    </li>
+                    <li class="widget uib_w_43" data-uib="app_framework/listitem" data-ver="1"><a>Learn Math</a>
+                    </li>
+                    <li class="widget uib_w_44" data-uib="app_framework/listitem" data-ver="1"><a>Verify EMD amount</a>
+                    </li>
+                    <li class="widget uib_w_45" data-uib="app_framework/listitem" data-ver="1"><a>Task n</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="upage vertical-col left panel" id="RonsPhoto" data-header="af-header-5" data-footer="none">
+
+                <div class="widget uib_w_55 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Property Photo:</p>
+                        <p>Address: 5148 Benson St.</p>
+                        <p>Irvine, CA 92617</p>
+                    </div>
+                </div>
+                <div class="widget uib_w_50 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/paint.jpg">
+
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <div class="table-thing with-label widget uib_w_51 d-margins" data-uib="app_framework/textarea" data-ver="1">
+                    <label class="narrow-control label-top-left">Add comment:</label>
+
+                    <textarea class="wide-control" rows="4" wrap="soft"></textarea>
+                </div>
+                <a class="button widget uib_w_52 icon right" data-uib="app_framework/button" data-ver="1">Submit</a>
+            </div>
+            <div class="upage vertical-col panel" id="RegisterForAccount" data-header="af-header-6" data-footer="none">
+                <div class="widget uib_w_57 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>You must register for a homeunion account at www.homeunion.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/underscore.js"></script>
+        <script src="js/lib/backbone.js"></script>
+        <script src="js/lib/keyboard.js"></script>
+        <script data-main="js/app2.js" src="js/lib/require.js"></script>
+        <script>
+            require.config({
+                urlArgs: "bust=" +  (new Date()).getTime()
+              });
+        </script>
+        <script>
+            intel.xdk.canvas.show();
+        </script>
+    </body>
+
+</html>
