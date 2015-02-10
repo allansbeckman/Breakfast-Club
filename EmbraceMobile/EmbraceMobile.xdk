@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "bf558728-f646-49c1-a768-6130e4225a1d",
-      "lastModifiedDate": 1422662722230,
+      "lastModifiedDate": 1423537729707,
       "creationDate": 1422662722182
     },
     "XDK-app-designer": "true",
@@ -62,8 +62,62 @@
         "appName_": "EmbraceMobile",
         "appID_": "xdk.intel.ad.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "images/ldpi_homeunionlaunch.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "images/mdpi_1homeunionlaunch.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "images/hdpi_1homeunionlaunch.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "images/xhdpi_1homeunionlaunch.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "images/ldpi_1homeunionsplash.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/mdpi_1homeunionsplash.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/hdpi_11homeunionsplash.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/homeunionsplash.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
@@ -87,8 +141,62 @@
         "appName_": "EmbraceMobile",
         "appID_": "xdk.intel.ad.template",
         "appAccess_": "*",
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "images/ldpi_homeunionlaunch.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "images/mdpi_1homeunionlaunch.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "images/hdpi_1homeunionlaunch.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "images/xhdpi_1homeunionlaunch.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "images/ldpi_1homeunionsplash.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/mdpi_1homeunionsplash.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/hdpi_11homeunionsplash.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "images/homeunionsplash.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "iosProvs_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
@@ -119,7 +227,8 @@
         "cordovaCLIVersion_": "3.5",
         "crosswalkVersion_": "stable",
         "appVersion_": "0.0.1",
-        "appDescription_": "Template to develop a cross-platform mobile app using the App Designer UI editor."
+        "appDescription_": "Template to develop a cross-platform mobile app using the App Designer UI editor.",
+        "appAuthor_": ""
       },
       "Windows8": {
         "platform_": "windows8",
