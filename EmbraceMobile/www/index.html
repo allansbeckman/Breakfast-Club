@@ -215,15 +215,15 @@
                 </div>
 
                 <div class="table-thing with-label widget uib_w_6 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <input class="wide-control" placeholder="Username" type="text">
+                    <input class="wide-control" placeholder="Username" type="text" id="username" value="admin">
                 </div>
                 <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <input class="wide-control" placeholder="Password" type="text">
+                    <input class="wide-control" placeholder="Password" type="text" id="pass" value="password">
                 </div>
                 <div class="widget uib_w_8 d-margins" data-uib="app_framework/checkbox" data-ver="1">
                     <input type="checkbox" id="af-checkbox-0">
                     <label class="content-box" for="af-checkbox-0">Remember Me</label>
-                </div><a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1" href="#landingPage" data-transition="fade">Login</a>
+                </div><a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1">Login</a>
             </div>
             <div class="upage panel AppBackground" id="landingPage" data-header="af-header-0" data-footer="none">
 
@@ -436,6 +436,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
             </div>
 
         </div>
+        <script src="js/test.js"></script>
 
         <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
 
@@ -447,7 +448,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
             <br>
             <hr style="color: 000000;">
 
-            <a href="#InvestorProfile">
+            <a id="investorsP" href="#InvestorProfile">
                 <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle">
                         <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
@@ -621,14 +622,12 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
             <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
 
-                <div class="widget-container left-receptacle"></div>
-
-                <div class="widget-container right-receptacle"></div>
-
-                <div>
+                
+                
+                <div >
 
                     <p>Investor Profile</p>
-
+                    <div id="investorlist"></div>
                 </div>
 
                 <table width="300" cellpadding="5">
@@ -789,7 +788,9 @@ more....</a>
 
                                 <p style="margin-left:25px;font-size:12px">818-111-2222</p>
 
-                                <a href="#Email"><p style="margin-left:25px;font-size:12px">burton@test.com</p></a>
+                                <a href="#Email">
+                                    <p style="margin-left:25px;font-size:12px">burton@test.com</p>
+                                </a>
 
                             </td>
 
@@ -967,7 +968,8 @@ more....</a>
         <script src="js/lib/underscore.js"></script>
         <script src="js/lib/backbone.js"></script>
         <script src="js/lib/keyboard.js"></script>
-        <script data-main="js/app2.js" src="js/lib/require.js"></script>
+        <script data-main="js/app.js" src="js/lib/require.js"></script>
+
         <script>
             require.config({
                 urlArgs: "bust=" +  (new Date()).getTime()

@@ -1,6 +1,5 @@
 (function()
 {
-    console.log("out");
      $.ui.useOSThemes=false;
     
 $(window).bind('setup', function() {
@@ -36,6 +35,21 @@ $(window).bind('setup', function() {
     $(document).on("click", ".uib_w_27", function(evt)
     {
       alert("message sent");
+    });
+    
+        /* button  Login */
+    $(document).on("click", ".uib_w_4", function(evt)
+    {
+        login(username.value, pass.value);
+       // window.location="#landingPage";
+        //  $.ui.loadContent("#landingPage", false, false, "fade");
+        
+    });
+    
+        /* button  Login */
+    $(document).on("click", ".uib_w_4", function(evt)
+    {
+        /* your code goes here */ 
     });
     
     }
