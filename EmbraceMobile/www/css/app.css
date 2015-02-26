@@ -37,3 +37,46 @@ body {
     background: white ;
     color: black ;
 }
+
+.investorDetailsTable{
+  width: 300px;
+  padding: 5px;
+
+}
+
+.investorDetailsTdCenter{
+  align: center;
+  vertical-align: center;
+}
+
+.investorDetailsImg{
+  height: 64px;
+  width: 64px;
+  margin-left: 25px;
+  border: 1px;
+}
+
+.investorDetailsTdLeft{
+  align: left;
+  vertical-align: left;
+}
+.investorDetailsPar{
+  margin-left: 25px;
+  font-size: 12px;
+}
+.investorDetailsOpTable{
+  font-weight: bold;
+  text-decoration: underline;
+  width: 100%;
+  border-collapse: collapse
+}
+
+.investorDetailsOpTdLeft{
+  align: left;
+  border: none;
+}
+
+.investorDetailsOpTdRight{
+  align: right;
+  border: none;
+}

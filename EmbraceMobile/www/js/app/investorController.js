@@ -2,12 +2,12 @@
  
      investorsP.addEventListener('click', function(){
          investorlist.innerHTML="";
-        loadInvestors(); 
+        loadInvestors();
      });
      
       function loadInvestors(){ jQuery.ajax({
          type: "GET",
-         url: "http://54.69.150.79:8080/embrace2/opportunity/investor/details/Bp",
+         url: "http://54.69.150.79:8080/embrace2/opportunity/investor/details/bp",
          contentType: "application/json",
          dataType: "json",
          success: function (data, status, jqXHR) {
