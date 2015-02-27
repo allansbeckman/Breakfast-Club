@@ -236,7 +236,7 @@
                             </a>
 
                             <img style="margin-left:25px; margin-right:25px; margin-top: 15px; float:center; max-heght:64px; max-width:64px" src="images/properties.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
                         </div>
 
                         <br>
@@ -245,13 +245,13 @@
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64px" src="images/opportunities.png">
                             </a>
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/tasklist.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
                         <br>
                         <div align="center">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64" src="images/messages.png">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/blanko.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </h1>
                         </div>
 
                     </div>
@@ -626,8 +626,10 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                 <div>
 
-                    <p>Investor Profile</p>
-                    <div id="investorlist"></div>
+                    <p style="margin-left: 15px">Investor Profile</p>
+                    <div id="investorCard"></div>
+                    <div style="margin-left: 10px" id="investorSolutionSpecialist"></div>
+                   
                 </div>
 
 
@@ -639,97 +641,72 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                 <div class="widget-container right-receptacle"></div>
 
-                <div>
-
-                    <p>Solution Specialist:</p>
-
-                    <p>Jim Manning</p>
-
-                </div>
+               
 
             </div>
 
-            <div class="table-thing with-label widget uib_w_8 d-margins" data-uib="app_framework/textarea" data-="" ver="1">
-
-                <label class="narrow-control label-top-left">Investment Goals</label>
-
-                <textarea class="wide-control" rows="3" wrap="soft" id="investorDetailGoal"></textarea>
-
-            </div><a class="button widget uib_w_9" data-uib="app_framework/button" data-ver="1">Edit</a>
-
-            <div class="widget uib_w_10 InvestmentLocations InvestmentLoc" data-uib="media/text" data-ver="0">
-
-                <div class="widget-container left-receptacle"></div>
-
-                <div class="widget-container right-receptacle"></div>
-
-                <div>
-
-                    <p>Investment Locations</p>
-
-                </div>
-
-            </div>
-
-            <div id="detailInvestmentLocations"></div>
-
-            <table border="0px" width="100%" style="border-collapse:collapse">
+             <p style="margin-left: 15px; font-size:14px">Investor Breadbox  <a align="left" id="breadboxSave">(save)</a></p>
+<table  border="1px" width="90%" style=" margin-left: 15px; margin-right: 15px; border-radius: 5px">
 
                 <tbody>
-
                     <tr>
-
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Investment Amount</b></p>
+                            <p id ="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
                         <td align="left" style="border:none">
-
-
-
-                            <p><u><b> <a href="#OppDetails">Cleveland</a></b></u>
-                            </p>
-
+                            <p style ="font-size: 12px"> <b>Price Range</b> </p>
+                            <p id="priceRange" contenteditable="true"></p>
                         </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Flint Westwood</p>
-
-                        </td>
-
                     </tr>
-
+                       <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Buying time frame</b></p>
+                            <p id="buyingTimeFrame" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                        <td align="left" style="border:none">
+                            <p style ="font-size: 12px"> <b>Location</b> </p>
+                            <p id="breadboxLocation" contenteditable="true"></p>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Pre-approved?</b></p>
+                            <p id="preApproved" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                        <td align="left" style="border:none">
+                            <p style ="font-size: 12px"> <b>CAP rate range</b> </p>
+                            <p id="capRateRange" contenteditable="true"></p>
+                        </td>
+                    </tr>
                     <tr>
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Houston</b></u>
-                            </p>
-
+                        <td  colspan="2" align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Comments</b></p>
+                            <p id="breadboxComments" contenteditable="true" style="margin-left: 5px"></p>
                         </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Jennifer Ramirez</p>
-
-                        </td>
-
                     </tr>
-
+                       
                 </tbody>
-
             </table>
 
-            <a class="button widget uib_w_135 d-margins" data-uib="app_framework/button" data-ver="1">See
+      
+            <p style="margin-left: 15px; font-size: 14px">Investment Locations</p>
 
-more....</a>
+            <table border="1px" width="90%" style=" margin-left: 15px; border-radius: 5px">
+
+                <tbody id="detailsBody">
+                    
+                </tbody>
+            </table>
+
+          
+
+
+
+
+    
 
         </div>
-
-        _____________________________________________________________________________________________
 
         <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-18" data-footer="none">
 
