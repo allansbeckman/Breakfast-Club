@@ -80,24 +80,3 @@ body {
   align: right;
   border: none;
 }
-
-.bold{
- font-weight: bold;
-font-size: 10px;
-}
-.boldUnderline{
- font-weight: bold;
-text-decoration: underline;
-}
-
-.margin15{
-}
-.detailsBodyTdLeft{
- align: left; border:none; margin-left: 15px;   
-}
-.detailsBodyTdRight{
- align: left; border:none;   
-}
-.inlineP{
- display: inline;   
-}

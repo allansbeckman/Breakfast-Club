@@ -16,8 +16,12 @@
            email: data.investorEmail,
            phone: data.investorPhone,
            goal: data.investmentGoal,
+<<<<<<< HEAD
            locations: data.investmentLocations,
             locationId: data.locationId
+=======
+           locations: data.investmentLocations
+>>>>>>> parent of f8bc423... Updated Investor Screen
        }));
          },
 
