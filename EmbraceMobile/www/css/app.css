@@ -80,3 +80,9 @@ body {
   align: right;
   border: none;
 }
+
+.myInvestorUserImage{
+    height: 48px; 
+    width: 48px; 
+    margin-right: 15px;
+}

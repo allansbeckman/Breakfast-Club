@@ -444,33 +444,34 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <label class="narrow-control label-top-left">Investors</label>
 
                 <input class="wide-control" type="text" placeholder="Search by Investor Name">
-            </div>
+            </div><a class="button widget uib_w_138" data-uib="app_framework/button" data-ver="1">Search</a>
             <br>
             <hr style="color: 000000;">
+            
+            <div id = "InvestorCardList"></div>
 
+            <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle">
+                    <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img class="myInvestorUserImage" src="images/Investors.png">
 
-                <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle">
-                        <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                            <figure class="figure-align">
-                                <img style="height: 48px; width: 48px; margin-right: 15px;" src="images/Investors.png">
-
-                                <figcaption data-position="bottom"></figcaption>
-                            </figure>
-
-                        </div>
-                    </div>
-                    <div class="widget-container right-receptacle">
-
-                    </div>
-
-                    <div>
-                       <a id="investorsP" href="#InvestorProfile"> Burton Peirce  </a>
-                            <br>818-111-2222
-                            <br>burton@test.com
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
 
                     </div>
                 </div>
+                <div class="widget-container right-receptacle">
+
+                </div>
+
+                <div>
+                    <a id="investorsP" href="#InvestorProfile"> Burton Peirce  </a>
+                    <br>818-111-2222
+                    <br>burton@test.com
+
+                </div>
+            </div>
 
             <br>
             <hr style="border-top: dotted 3px;">
@@ -478,7 +479,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <div class="widget-container left-receptacle">
                     <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
                         <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
+                            <img class="myInvestorUserImage" src="images/Investors.png">
 
                             <figcaption data-position="bottom"></figcaption>
                         </figure>
@@ -503,7 +504,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <div class="widget-container left-receptacle">
                     <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
                         <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
+                            <img class="myInvestorUserImage" src="images/Investors.png">
 
                             <figcaption data-position="bottom"></figcaption>
                         </figure>
@@ -534,16 +535,17 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <label class="narrow-control label-top-left">Opportunities</label>
 
                 <input class="wide-control" type="text" placeholder="Search by Investor Name">
-            </div>
+            </div><a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1">Search</a>
             <br>
             <hr style="color: 000000;">
 
+            <div id = "OpportunityList"></div>
             <a href="#OppDetails">
                 <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle">
                         <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
                             <figure class="figure-align">
-                                <img style="height: 48px; width: 48px; margin-right: 15px;" src="images/Investors.png">
+                                <img class="myInvestorUserImage" src="images/Investors.png">
 
                                 <figcaption data-position="bottom"></figcaption>
                             </figure>
@@ -568,7 +570,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <div class="widget-container left-receptacle">
                     <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
                         <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
+                            <img class="myInvestorUserImage" src="images/Investors.png">
 
                             <figcaption data-position="bottom"></figcaption>
                         </figure>
@@ -593,7 +595,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                 <div class="widget-container left-receptacle">
                     <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
                         <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
+                            <img class="myInvestorUserImage" src="images/Investors.png">
 
                             <figcaption data-position="bottom"></figcaption>
                         </figure>
@@ -622,14 +624,11 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
             <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
 
-
-
                 <div>
 
                     <p>Investor Profile</p>
                     <div id="investorlist"></div>
                 </div>
-
 
             </div>
 
@@ -680,8 +679,6 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                     <tr>
 
                         <td align="left" style="border:none">
-
-
 
                             <p><u><b> <a href="#OppDetails">Cleveland</a></b></u>
                             </p>
