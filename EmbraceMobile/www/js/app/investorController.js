@@ -17,8 +17,12 @@
            phone: data.investorPhone,
            goal: data.investmentGoal,
 <<<<<<< HEAD
+<<<<<<< HEAD
            locations: data.investmentLocations,
             locationId: data.locationId
+=======
+           locations: data.investmentLocations
+>>>>>>> parent of f8bc423... Updated Investor Screen
 =======
            locations: data.investmentLocations
 >>>>>>> parent of f8bc423... Updated Investor Screen
