@@ -7,7 +7,7 @@ define(['app/investorModel'], function(investorModel){
         renderInvestorDetials('Burton Peirce');
     }
     
-    function renderInvestorDetials(investorName){
+    function renderInvestorDetials(investorName){ 
         investor = investorModel.where({name: investorName})[0];
          name = investor.get('name');
          email = investor.get('email');
