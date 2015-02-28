@@ -80,3 +80,31 @@ body {
   align: right;
   border: none;
 }
+
+.opportunityDetailsTable{
+    width: 300px;
+    padding: 5px;
+}
+
+.opportunityDetailsImageTd{
+    align: center;
+    vertical-align:middle;
+}
+
+.opportunityDetailsImage{
+    height: 64px;
+    width: 64px;
+    border: 1px;
+    margin-left: 25px;
+}
+
+.opportunityDetailsContactTd{
+    align: left;
+}
+
+.opportunityDetailsContactP{
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+
