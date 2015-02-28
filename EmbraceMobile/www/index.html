@@ -236,7 +236,7 @@
                             </a>
 
                             <img style="margin-left:25px; margin-right:25px; margin-top: 15px; float:center; max-heght:64px; max-width:64px" src="images/properties.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
                         </div>
 
                         <br>
@@ -245,13 +245,13 @@
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64px" src="images/opportunities.png">
                             </a>
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/tasklist.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
                         <br>
                         <div align="center">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64" src="images/messages.png">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/blanko.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </h1>
                         </div>
 
                     </div>
@@ -538,7 +538,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
             <br>
             <hr style="color: 000000;">
 
-            <a id="OpportunityDetailsP" href="#OppDetails">
+            <a href="#OppDetails">
                 <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
                     <div class="widget-container left-receptacle">
                         <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
@@ -626,8 +626,10 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                 <div>
 
-                    <p>Investor Profile</p>
-                    <div id="investorlist"></div>
+                    <p style="margin-left: 15px">Investor Profile</p>
+                    <div id="investorCard"></div>
+                    <div style="margin-left: 10px" id="investorSolutionSpecialist"></div>
+                   
                 </div>
 
 
@@ -639,25 +641,76 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                 <div class="widget-container right-receptacle"></div>
 
-                <div>
-
-                    <p>Solution Specialist:</p>
-
-                    <p>Jim Manning</p>
-
-                </div>
+               
 
             </div>
 
-            <div class="table-thing with-label widget uib_w_8 d-margins" data-uib="app_framework/textarea" data-="" ver="1">
+             <p style="margin-left: 15px; font-size:14px">Investor Breadbox  <a align="left" id="breadboxSave">(save)</a></p>
+<table  border="1px" width="90%" style=" margin-left: 15px; margin-right: 15px; border-radius: 5px">
 
-                <label class="narrow-control label-top-left">Investment Goals</label>
+                <tbody>
+                    <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Investment Amount</b></p>
+                            <p id ="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                        <td align="left" style="border:none">
+                            <p style ="font-size: 12px"> <b>Price Range</b> </p>
+                            <p id="priceRange" contenteditable="true"></p>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Buying time frame</b></p>
+                            <p id="buyingTimeFrame" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                        <td align="left" style="border:none">
+                            <p style ="font-size: 12px"> <b>Location</b> </p>
+                            <p id="breadboxLocation" contenteditable="true"></p>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Pre-approved?</b></p>
+                            <p id="preApproved" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                        <td align="left" style="border:none">
+                            <p style ="font-size: 12px"> <b>CAP rate range</b> </p>
+                            <p id="capRateRange" contenteditable="true"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  colspan="2" align="left" style="border:none; margin-left: 15px">
+                             <p style="margin-left: 5px; font-size: 12px"><b>Comments</b></p>
+                            <p id="breadboxComments" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
+                    </tr>
+                       
+                </tbody>
+            </table>
 
-                <textarea class="wide-control" rows="3" wrap="soft" id="investorDetailGoal"></textarea>
+      
+            <p style="margin-left: 15px; font-size: 14px">Investment Locations</p>
 
-            </div><a class="button widget uib_w_9" data-uib="app_framework/button" data-ver="1">Edit</a>
+            <table border="1px" width="90%" style=" margin-left: 15px; border-radius: 5px">
 
-            <div class="widget uib_w_10 InvestmentLocations InvestmentLoc" data-uib="media/text" data-ver="0">
+                <tbody id="detailsBody">
+                    
+                </tbody>
+            </table>
+
+          
+
+
+
+
+    
+
+        </div>
+
+        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-18" data-footer="none">
+
+            <div class="widget uib_w_16 d-margins OpportunityDetails" data-uib="media/text" data-ver="0">
 
                 <div class="widget-container left-receptacle"></div>
 
@@ -665,228 +718,202 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                 <div>
 
-                    <p>Investment Locations</p>
+                    <p>Opportunity Details</p>
 
                 </div>
-
-            </div>
-
-            <div id="detailInvestmentLocations"></div>
-
-            <table border="0px" width="100%" style="border-collapse:collapse">
-
-                <tbody>
-
-                    <tr>
-
-                        <td align="left" style="border:none">
-
-
-
-                            <p><u><b> <a href="#OppDetails">Cleveland</a></b></u>
-                            </p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Flint Westwood</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-<<<<<<< HEAD
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Houston</b></u>
-                            </p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Jennifer Ramirez</p>
-
-                        </td>
-
-                    </tr>
-=======
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Houston</b></u>
-                            </p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Jennifer Ramirez</p>
-
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-            <a class="button widget uib_w_135 d-margins" data-uib="app_framework/button" data-ver="1">See
-
-more....</a>
->>>>>>> parent of f8bc423... Updated Investor Screen
-
-                </tbody>
-
-<<<<<<< HEAD
-            </table>
-=======
-        _____________________________________________________________________________________________
-
-        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-18" data-footer="none">
->>>>>>> parent of f8bc423... Updated Investor Screen
-
-            <a class="button widget uib_w_135 d-margins" data-uib="app_framework/button" data-ver="1">See
-
-more....</a>
-
-        </div>
-
-        _____________________________________________________________________________________________
-
-        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-18" data-footer="none">
-
-            <div>
-                    <p style="margin-left:6px">Opportunity Details</p>
-                </div>
-
-                <div id="oppDetailsInfo"></div>
 
                 <table width="300" cellpadding="5">
+
                     <tbody>
+
                         <tr>
+
                             <td align="center" valign="center">
 
                                 <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
 
                             </td>
+
                             <td align="left" valign="left">
+
                                 <p style="margin-left:25px;font-size:12px">Burton Pierce</p>
+
                                 <p style="margin-left:25px;font-size:12px">818-111-2222</p>
+
                                 <a href="#Email">
                                     <p style="margin-left:25px;font-size:12px">burton@test.com</p>
                                 </a>
+
                             </td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
-            <div >
-                    <p style="margin-left:6px">Investment Location: Cleveland</p>
+
             </div>
 
-            <hr style="color: #000000;background-color: #000000;height: 5px;">
-            
+            <div class="widget uib_w_20 d-margins" data-uib="media/text" data-ver="0">
+
+                <div class="widget-container left-receptacle"></div>
+
+                <div class="widget-container right-receptacle"></div>
+
+                <div>
+
+                    <p>Investment Location: Cleveland</p>
+
+                </div>
+
+            </div>
+
             <table width="300" cellpadding="5">
+
                 <tbody>
+
                     <tr>
+
                         <td align="left" valign="center">
+
                             <p style="margin-left:25px;font-size:16px">Activities</p>
+
                         </td>
+
                         <td align="right" valign="left">
-                            <a href="#Add_Activity" data-transition="fade"><img style="height:32px; width:32px;" src="images/plus_button.svg" border="0"></a>
+
+                            <a class="button widget uib_w_23 icon add" data-uib="app_framework/button" data-="" ver="1" href="#Add_Activity" data-transition="fade"></a>
+
                         </td>
+
                     </tr>
+
                 </tbody>
+
             </table>
-            <hr style="color: #000000;background-color: #000000;height: 5px;">
+
+            <hr>
 
             <br>
 
-            <script type="text/template" id="#activity-list-template">
-                <table border="1px" width="100%" style="border-collapse:collapse">
-                    <tbody>
-                        <% _.each(OpportunityDetails, function(opportunityDetails) {%>
-                          <tr>
-                            <td><%= opportunityDetails.get('opportunityStatus')%></td>
-                            <td><%= opportunityDetails.get('createdDate') %></td>
-                            <td><%= opportunityDetails.get('propertyAddress') %></td>
-                          </tr>
-                        <% }); %>
-                    </tbody>
-                </table>
-            </script>
-            
-            
-            
             <table border="1px" width="100%" style="border-collapse:collapse">
+
                 <tbody>
+
                     <tr>
+
                         <td align="left" style="border:none">
-                            <p><u><b>Offer Accepted</b></u></p>
+
+                            <p><u><b>Offer Accepted</b></u>
+
+                            </p>
+
                             <p>02/12/2015 | 2:30 pm</p>
+
                         </td>
+
                         <td align="right" style="border:none">
+
                             <p>10911 Mercury STREET</p>
+
                             <p>Jacksonville, FL 32250</p>
+
                         </td>
+
                     </tr>
 
                     <tr>
+
                         <td colspan="2" align="center" style="border-top:none">
-                            <p style="display:inline"><b>Comments: </b></p>
+
+                            <p style="display:inline"><b>Comments: </b>
+
+                            </p>
+
                             <p style="display:inline">Offer accepted by seller.</p>
+
                         </td>
+
                     </tr>
+
                     <tr>
+
                         <td align="left" style="border:none">
-                            <p><u><b>Offer Submitted</b></u></p>
+
+                            <p><u><b>Offer Submitted</b></u>
+
+                            </p>
+
                             <p>02/10/2015 | 1:30 pm</p>
+
                         </td>
+
                         <td align="right" style="border:none">
+
                             <p>10911 Mercury STREET</p>
+
                             <p>Jacksonville, FL 32250</p>
+
                         </td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="2" align="center" style="border-top:none">
-                            <p style="display:inline"><b>Comments: </b></p>
-                            <p style="display:inline">Offer accepted by seller.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="border:none">
-                            <p><u><b>Property Review</b></u></p>
-                            <p>02/8/2015 | 3:30 pm</p>
-                        </td>
-                        <td align="right" style="border:none">
-                            <p>275 Mayor DRIVE</p>
-                            <p>Spring, TX 77373</p>
-                        </td>
+
                     </tr>
 
                     <tr>
+
                         <td colspan="2" align="center" style="border-top:none">
-                            <p style="display:inline"><b>Comments: </b></p>
-                            <p style="display:inline">Investor did not like the property due to neighborhood condition.</p>
+
+                            <p style="display:inline"><b>Comments: </b>
+
+                            </p>
+
+                            <p style="display:inline">Offer accepted by seller.</p>
+
                         </td>
+
                     </tr>
+
+                    <tr>
+
+                        <td align="left" style="border:none">
+
+                            <p><u><b>Property Review</b></u>
+
+                            </p>
+
+                            <p>02/8/2015 | 3:30 pm</p>
+
+                        </td>
+
+                        <td align="right" style="border:none">
+
+                            <p>275 Mayor DRIVE</p>
+
+                            <p>Spring, TX 77373</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2" align="center" style="border-top:none">
+
+                            <p style="display:inline"><b>Comments: </b>
+
+                            </p>
+
+                            <p style="display:inline">Investor did not like the property due to neighborhood condition.</p>
+
+                        </td>
+
+                    </tr>
+
                 </tbody>
+
             </table>
 
             <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
+
         </div>
 
         <script src="js/lib/jquery.min.js"></script>

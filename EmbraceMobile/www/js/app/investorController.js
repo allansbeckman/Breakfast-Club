@@ -1,7 +1,8 @@
  define(['app/investorModel', 'app/Investor'], function(investorModel, Investor){
  
      investorsP.addEventListener('click', function(){
-         investorlist.innerHTML="";
+         investorCard.innerHTML="";
+         investorSolutionSpecialist.innerHTML="";
         loadInvestors();
      });
      
@@ -16,16 +17,16 @@
            email: data.investorEmail,
            phone: data.investorPhone,
            goal: data.investmentGoal,
-<<<<<<< HEAD
-<<<<<<< HEAD
            locations: data.investmentLocations,
-            locationId: data.locationId
-=======
-           locations: data.investmentLocations
->>>>>>> parent of f8bc423... Updated Investor Screen
-=======
-           locations: data.investmentLocations
->>>>>>> parent of f8bc423... Updated Investor Screen
+            locationId: data.locationId,
+           investmentAmount: "$50,000",
+            priceRange: "$100,000-$200,000",
+                buyingTimeFrame: "Soon, but not urgent",
+                preApproved: "Yes",
+                capRateRange: "10-15%",
+                comments: "Investor is interested in 3BR properties with low rehav cost. Houston is preferred location.",
+                location: "Cleveland, Houston",
+                specialist: "Jim Moore"
        }));
          },
 
