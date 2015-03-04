@@ -1,19 +1,24 @@
  define(['app/opportunityDetailsModel', 'app/opportunityDetails'], function(opportunityDetailsModel, opportunityDetails){
  
      OpportunityDetailsP.addEventListener('click', function(){
-         console.log("clicked");
-        loadOpportunityDetails("02017a93-1063-11e4-9bfb-0255bff79e57");
+        loadOpportunityDetails(window.locationId);
+        console.log('rendering with location id' + window.locationId);
+     });
+     
+     detailsBody.addEventListener('click', function(){
+        loadOpportunityDetails(window.locationId);
+        console.log('rendering with location id' + window.locationId);
      });
      
       function loadOpportunityDetails(locationName){ jQuery.ajax({
          type: "GET",
-         url: "http://54.69.150.79:8080/embrace2/opportunity/investor/activities/bp",
+         url: "http://54.69.150.79:8080/embrace2/opportunity/investor/activities/" + window.locationId,
          contentType: "application/json",
          dataType: "json",
          success: function (data, status, jqXHR) {
              var activity1 = data.opportunityInvestorActivities;
             $.each(data.opportunityInvestorActivities, function(arrayIndex, activity){ 
-                console.log("model " + arrayIndex);
+                
              opportunityDetailsModel.add(new opportunityDetails({
                  
                  opportunityStatus: activity.opportunityStatus,

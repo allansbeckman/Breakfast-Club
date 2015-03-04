@@ -23,6 +23,7 @@ define(['app/investorModel'], function(investorModel){
         frame = investor.get('buyingTimeFrame');
         comments = investor.get('comments');
         solutionSpecialist = investor.get('specialist');
+        locationId = investor.get('locationId');
         /*
         console.log(amount);
         console.log(pRange);
@@ -115,11 +116,14 @@ define(['app/investorModel'], function(investorModel){
         
         $.each(investmentLocations, function(arrayID,group) {
             var tempTdLeft = tdLeft.cloneNode(true);
-           
-            var tempPar = document.createElement('p');
+            var tempPar = document.createElement('a');
             tempPar.setAttribute('class', 'boldUnderline');
+            tempPar.setAttribute('id', group.locationId);
             tempPar.style.marginLeft= "5px";
             tempPar.innerHTML = group.city;
+            tempPar.setAttribute('href', '#OppDetails');
+            tempPar.setAttribute("onClick", 'locationClick(this)');
+            
             tempTdLeft.appendChild(tempPar);
             
              var tempTdRight = tdRight.cloneNode(true);

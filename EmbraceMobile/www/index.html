@@ -107,6 +107,12 @@
         <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+        <script> window.locationId = ""</script>
+        <script> locationClick = function(location){
+            console.log("location click: " + location.id);
+            window.locationId = location.id; 
+        };
+        </script>
     </head>
     <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
     <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
@@ -714,8 +720,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                     <p style="margin-left:6px">Opportunity Details</p>
                 </div>
 
-                <div id="oppDetailsInfo"></div>
-
+            
                 <table width="300" cellpadding="5">
                     <tbody>
                         <tr>
@@ -755,24 +760,11 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
             <hr style="color: #000000;background-color: #000000;height: 5px;">
 
             <br>
-
-            <script type="text/template" id="#activity-list-template">
-                <table border="1px" width="100%" style="border-collapse:collapse">
-                    <tbody>
-                        <% _.each(OpportunityDetails, function(opportunityDetails) {%>
-                          <tr>
-                            <td><%= opportunityDetails.get('opportunityStatus')%></td>
-                            <td><%= opportunityDetails.get('createdDate') %></td>
-                            <td><%= opportunityDetails.get('propertyAddress') %></td>
-                          </tr>
-                        <% }); %>
-                    </tbody>
-                </table>
-            </script>
             
-            
-            
-            <table border="1px" width="100%" style="border-collapse:collapse">
+            <div id="oppDetailsClick">
+                <div id="oppDetailsInfo"></div>
+            </div>
+            <!--<table border="1px" width="100%" style="border-collapse:collapse">
                 <tbody>
                     <tr>
                         <td align="left" style="border:none">
@@ -826,7 +818,7 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
 
             <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
        
