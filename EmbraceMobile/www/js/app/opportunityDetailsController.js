@@ -10,7 +10,9 @@
         console.log('rendering with location id' + window.locationId);
      });
      
-      function loadOpportunityDetails(locationName){ jQuery.ajax({
+      function loadOpportunityDetails(locationName){
+          opportunityDetailsModel.reset();
+          jQuery.ajax({
          type: "GET",
          url: "http://54.69.150.79:8080/embrace2/opportunity/investor/activities/" + window.locationId,
          contentType: "application/json",
