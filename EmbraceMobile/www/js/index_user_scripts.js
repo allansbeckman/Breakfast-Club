@@ -51,6 +51,12 @@ $(window).bind('setup', function() {
     {
         /* your code goes here */ 
     });
+     
+            /* button  #searchButton */
+    $(document).on("click", "#searchButton", function(evt)
+    {
+        searchInv();
+    });
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);

@@ -113,6 +113,15 @@
             window.locationId = location.id; 
         };
         </script>
+        <script>
+            window.clickedInvestor = "not someone"
+        </script>
+        <script>
+            setInvestor = function(investor){
+                console.log("setinvestor called: " + investor.id);
+                    window.clickedInvestor = investor.id;
+            };
+        </script>
     </head>
     <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
     <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
@@ -444,95 +453,22 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
         </div>
         <script src="js/test.js"></script>
 
-        <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
+    <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
 
             <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
-                <label class="narrow-control label-top-left">Investors</label>
+                <label class="narrow-control label-top-left" for="searchValue">Investors</label>
 
-                <input class="wide-control" type="text" placeholder="Search by Investor Name">
-            </div>
+                <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchValue">
+            </div><a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1" id="searchButton">Search</a>
             <br>
             <hr style="color: 000000;">
-
-
-                <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle">
-                        <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                            <figure class="figure-align">
-                                <img style="height: 48px; width: 48px; margin-right: 15px;" src="images/Investors.png">
-
-                                <figcaption data-position="bottom"></figcaption>
-                            </figure>
-
-                        </div>
-                    </div>
-                    <div class="widget-container right-receptacle">
-
-                    </div>
-
-                    <div>
-                       <a id="investorsP" href="#InvestorProfile"> Burton Peirce  </a>
-                            <br>818-111-2222
-                            <br>burton@test.com
-
-                    </div>
-                </div>
-
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle">
-                    <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                        <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
-
-                            <figcaption data-position="bottom"></figcaption>
-                        </figure>
-
-                    </div>
-                </div>
-                <div class="widget-container right-receptacle">
-
-                </div>
-
-                <div>
-                    <p>Johanna Monson
-                        <br>818-111-2222
-                        <br>burton@test.com
-                    </p>
-                    <p></p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle">
-                    <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                        <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
-
-                            <figcaption data-position="bottom"></figcaption>
-                        </figure>
-
-                    </div>
-                </div>
-                <div class="widget-container right-receptacle">
-
-                </div>
-
-                <div>
-                    <p>John Smith
-                        <br>818-111-2222
-                        <br>burton@test.com
-                    </p>
-                    <p></p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <a class="button widget uib_w_129" data-uib="app_framework/button" data-ver="1">See More...</a>
+        <div id="investorsP"> 
+            <div id="investorList1"></div>
+        </div>
+    
 
         </div>
+
 
         <div class="upage panel vertical-col" id="MyOpportunities" data-header="af-header-0" data-footer="none">
 
