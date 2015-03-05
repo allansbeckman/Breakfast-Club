@@ -19,3 +19,17 @@ document.body.appendChild(a);
              alert("Invalid Login");
          }
 });};
+function postActivity(){
+jQuery.ajax({
+        type: "POST",
+        url: "",
+    data:{"":,"":pw},
+        contentType: "application/x-www-form-urlencoded",
+        dataType: "json",
+        success: function(data,status, jqXHR){
+            
+        },
+        error: function(jqXHR, status){
+            alert("Activity Failed to Post");
+        }
+});};
