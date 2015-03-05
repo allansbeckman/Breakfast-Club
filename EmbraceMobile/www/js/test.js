@@ -19,27 +19,3 @@ document.body.appendChild(a);
              alert("Invalid Login");
          }
 });};
-function postActivity(){
-jQuery.ajax({
-        type: "POST",
-        url: "",
-    data:{"":,"":,"":},
-        contentType: "application/x-www-form-urlencoded",
-        dataType: "json",
-        success: function(data,status, jqXHR){
-            
-        },
-        error: function(jqXHR, status){
-            alert("Activity Failed to Post");
-        }
-});};
-function searchProperty(){
-jQuery.ajax({
-        type: "",
-        url:"http://54.69.150.79:8080/embrace/propertysearch",
-    data:{"":""},
-        contentType: "application/x-www-form-urlencoded",
-        dataType:"json",
-        success:function(data,status,jqXhr){
-        },
-});};
