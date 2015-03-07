@@ -1,34 +1,24 @@
 define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
 
     function renderDetailsList(){
-        console.log('cleared html');
         oppDetailsInfo.innerHTML = "";
-        console.log("rendering");
-        console.log(opportunityDetailsModel);
-        opportunityDetails = opportunityDetailsModel.where({city: "Spring"})[0];
-        
-        city = opportunityDetails.get('city');
-        state = opportunityDetails.get('propertyState');
-        opportunity_status = opportunityDetails.get('opportunityStatus');
-        createdDate = opportunityDetails.get('createdDate');
-        propertyAddress = opportunityDetails.get('propertyAddress');
-        propertyZip = opportunityDetails.get('propertyZip');
-        Comments = opportunityDetails.get('comments');
-        image = opportunityDetails.image;
-      
         var newDiv = document.createElement("div");
         
         var activityTable = document.createElement('table');
         activityTable.setAttribute('border', '1px');
         activityTable.setAttribute('width', '100%');
         activityTable.style.borderCollapse = "collapse";
-        //activityTable.setAttribute('style', 'border-collapse:collapse');
         var tableBody = document.createElement('tbody');
         
         opportunityDetailsModel.each(function(opportunity) {
-            
-            console.log(opportunity.get('city'));
-            
+            city = opportunity.get('city');
+            state = opportunity.get('propertyState');
+            opportunity_status = opportunity.get('opportunityStatus');
+            createdDate = opportunity.get('createdDate');
+            propertyAddress = opportunity.get('propertyAddress');
+            propertyZip = opportunity.get('propertyZip');
+            Comments = opportunity.get('comments');
+            image = opportunity.image;
             var activityRow = document.createElement('tr');
             var data1 = document.createElement('td');
             data1.setAttribute('align', 'left');
