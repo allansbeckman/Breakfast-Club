@@ -41,9 +41,6 @@ $(window).bind('setup', function() {
     $(document).on("click", ".uib_w_4", function(evt)
     {
         login(username.value, pass.value);
-       // window.location="#landingPage";
-        //  $.ui.loadContent("#landingPage", false, false, "fade");
-        
     });
     
         /* button  Login */

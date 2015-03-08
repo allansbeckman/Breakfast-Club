@@ -1,14 +1,12 @@
 define(['app/investorModel'], function(investorModel){
 
     
-    function renderInvestorList(){
-     //TODO: for investor search 
-        renderInvestorDetials('Burton Peirce');
-    }
-    
-    function renderInvestorDetials(investorName){
-        console.log("called");
-        investor = investorModel.where({name: investorName})[0];
+    function renderLastInvestor(){
+          investorCard.innerHTML="";
+         investorSolutionSpecialist.innerHTML="";
+         detailsBody.innerHTML="";
+        console.log("rendering investor details called");
+        investor = investorModel.where({id: window.clickedInvestor})[0];
          name = investor.get('name');
          email = investor.get('email');
          phone = investor.get('phone');
@@ -145,61 +143,13 @@ define(['app/investorModel'], function(investorModel){
             
             console.log("city " + arrayID +" "+ group.city);
         });
-     
-
-        
-        
-        /*var table2 = document.createElement("table");
-        table2.setAttribute('class', 'investorDetailsOpTable');
-        var tbody2 = document.createElement("tbody");
-        
-        var tr3 = document.createElement("tr");
-        var td3 =  document.createElement("td");
-        td3.setAttribute('class','investorDetailsOpTdLeft');
-        var p3 = document.createElement("p");
-        p3.setAttribute('class', 'boldUnderline');
-        p3.innerHTML = investmentLocations[0].city;
-        
-        var td4 =  document.createElement("td");
-        td4.setAttribute('class','investorDetailsOpTdRight');
-        var p4 = document.createElement("p");
-        p4.setAttribute('class', 'boldUnderline');
-        p4.innerHTML = "ILM:"
-         var p5 = document.createElement("p");
-        p5.setAttribute('class', 'boldUnderline');
-        p5.innerHTML = investmentLocations[0].ilmName;
-        tr3.appendChild(td3);
-        tr3.appendChild(td4);
-        tbody2.appendChild(tr3);
-        
-        
-         var tr4 = document.createElement("tr");
-        var td6 =  document.createElement("td");
-        td6.setAttribute('class','investorDetailsOpTdLeft');
-        var p6 = document.createElement("p");
-        p6.setAttribute('class', 'boldUnderline');
-        p6.innerHTML = investmentLocations[1].city;
-        
-        var td7 =  document.createElement("td");
-        td7.setAttribute('class','investorDetailsOpTdRight');
-        var p7 = document.createElement("p");
-        p7.setAttribute('class', 'boldUnderline');
-        p7.innerHTML = "ILM:"
-         var p8 = document.createElement("p");
-        p8.setAttribute('class', 'boldUnderline');
-        p8.innerHTML = investmentLocations[1].ilmName;
-        tr4.appendChild(td6);
-        tr4.appendChild(td7);
-        tbody2.appendChild(tr4);
-        table2.appendChild(tbody2);
-        
-        
-        detailInvestmentLocations.appendChild(table2);*/
+    
+    
         console.log("append investor profile card");
         investorCard.appendChild(newDiv);
     }
     
-    investorModel.on('add', renderInvestorList);
-    investorModel.on('change', renderInvestorList);
-    investorModel.on('remove', renderInvestorList);
+    investorModel.on('add', renderLastInvestor);
+    investorModel.on('change', renderLastInvestor);
+    investorModel.on('remove', renderLastInvestor);
 });

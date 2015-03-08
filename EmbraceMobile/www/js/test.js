@@ -135,34 +135,33 @@ function renderInvestorOppLink(investor) {
 
 function searchInv(){
     console.log("searching from investors");
- var test = $.getJSON("success.json", function(data){ 
+ /*var test = $.getJSON("success.json", function(data){ 
     $.each(data.aaData, function(arrayID,investor){
                     renderInvestorInvLink(investor);
 					
 				});
  
- })
-    console.log("inner: " + searchValue.value);
+ })*/
+    console.log("search value: " + searchValue.value);
     folName = searchValue.value;
     investorList1.innerHTML="";
-	/*jQuery.ajax({
+	jQuery.ajax({
 			type: "POST",
 			url: "http://54.69.150.79:8080/embrace2/opportunity/investor/search",
-		data:{"folName": "folName"},
-			contentType: "text/plain",
+		data: JSON.stringify({"folName": searchValue.value}),
+			contentType: "application/json",
 			dataType: "json",
 			success: function (data, status, jqXHR) {
 				$.each(data.aaData, function(arrayID,investor){
-                    renderInvestor(investor);
+                    renderInvestorInvLink(investor);
 					
 				});
 			},
 	
 			error: function (jqXHR, status) {
-				// error handler
 				alert("Invalid Search");
 			}
-	});*/
+	});
 };
 
 
