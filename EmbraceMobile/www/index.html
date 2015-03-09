@@ -107,6 +107,7 @@
         <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+        <script type="text/javascript">window.emailReturnPage = ''</script>
         <script> window.locationId = ""</script>
         <script> locationClick = function(location){
             console.log("location click: " + location.id);
@@ -675,7 +676,8 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                                 <script type="text/javascript">
                                     document.getElementById('oppDetailsEmail').addEventListener('click', function(event) 
                                                                                                                         {
-                                        document.getElementById('emailTo').value = document.getElementById('investOppEmail').innerHTML; 
+                                        document.getElementById('emailTo').value = document.getElementById('investOppEmail').innerHTML;
+                                        window.emailReturnPage = '#OppDetails';
                                     });
                                 </script>
                             </td>

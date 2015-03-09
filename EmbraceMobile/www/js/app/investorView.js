@@ -71,8 +71,13 @@ define(['app/investorModel'], function(investorModel){
         p2.setAttribute('class','investorDetailsPar');
         p2.innerHTML = phone;
         
-        var p3 = document.createElement("p");
-        p3.setAttribute('class','investorDetailsPar');
+        var p3 = document.createElement('a');
+        //p3.setAttribute('class','investorDetailsPar');
+        p3.setAttribute('href', '#Email');
+        p3.addEventListener('click', function(event) {
+            emailTo.value = p3.innerHTML;
+            window.emailReturnPage = '#InvestorProfile';
+        });
       
          
         p3.innerHTML = email;

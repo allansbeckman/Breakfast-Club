@@ -44,14 +44,15 @@ $(window).bind('setup', function() {
         success: function (data, status, jqXHR) {
             console.log(data);
             var link = document.createElement('a');
-            link.href = '#OppDetails';
+            console.log('return page' + window.emailReturnPage);
+            link.href = window.emailReturnPage;
             Email.appendChild(link);
             link.click(); 
         },
     error: function (jqXHR, status) {
              // error handler
             var link = document.createElement('a');
-            link.href = '#OppDetails';
+            link.href = window.emailReturnPage;
             Email.appendChild(link);
             link.click(); 
 }
