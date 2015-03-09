@@ -34,17 +34,18 @@ $(window).bind('setup', function() {
         /* button  Send */
     $(document).on("click", ".uib_w_27", function(evt)
     {
-      //alert("message sent");
+        var mailTo = emailTo.value;
+        var subject = emailSubject.value;
+        var message = emailMessage.value;
         jQuery.ajax({
         type:"POST",
         url: "http://54.69.150.79:8080/embrace2/messages/createMessage/5871ce20-c11c-11e4-aaa2-28d2444bf619/Opportunity",
-        data:                {"messageType":"Email","mailToRecipients":"abc@gmail.com","subject":"Test Email", "messageText":"This is an Testing Email.", "mailCcRecipients":"singlau@homeunion.com"},
+        data:                {"messageType":"Email","mailToRecipients":mailTo,"subject":subject, "messageText":message},
         contentType:"application/json",
         dataType:"json",
         success: function (data, status, jqXHR) {
             console.log(data);
             var link = document.createElement('a');
-            console.log('return page' + window.emailReturnPage);
             link.href = window.emailReturnPage;
             Email.appendChild(link);
             link.click(); 
