@@ -34,8 +34,28 @@ $(window).bind('setup', function() {
         /* button  Send */
     $(document).on("click", ".uib_w_27", function(evt)
     {
-      alert("message sent");
-    });
+      //alert("message sent");
+        jQuery.ajax({
+        type:"POST",
+        url: "http://54.69.150.79:8080/embrace2/messages/createMessage/5871ce20-c11c-11e4-aaa2-28d2444bf619/Opportunity",
+        data:                {"messageType":"Email","mailToRecipients":"abc@gmail.com","subject":"Test Email", "messageText":"This is an Testing Email.", "mailCcRecipients":"singlau@homeunion.com"},
+        contentType:"application/json",
+        dataType:"json",
+        success: function (data, status, jqXHR) {
+            console.log(data);
+            var link = document.createElement('a');
+            link.href = '#OppDetails';
+            Email.appendChild(link);
+            link.click(); 
+        },
+    error: function (jqXHR, status) {
+             // error handler
+            var link = document.createElement('a');
+            link.href = '#OppDetails';
+            Email.appendChild(link);
+            link.click(); 
+}
+    })});
     
         /* button  Login */
     $(document).on("click", ".uib_w_4", function(evt)
