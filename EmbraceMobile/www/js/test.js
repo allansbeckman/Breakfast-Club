@@ -80,8 +80,9 @@ function renderInvestorInvLink(investor) {
 };
 
 function renderInvestorOppLink(investor) {
+    console.log("render inv opp link");
     
-     var newDiv = document.createElement("div");
+      var newDiv = document.createElement("div");
         
         var table = document.createElement("table");
         table.setAttribute('class','investorDetailsTable');
@@ -103,9 +104,15 @@ function renderInvestorOppLink(investor) {
         var td2 = document.createElement("td");
         td2.setAttribute('class','investorDetailsTDLeft');
           
+     var link = document.createElement('a');
+    link.setAttribute('href', '#OppDetails');
         var p1 = document.createElement("p");
         p1.setAttribute('class','investorDetailsPar');
+    p1.setAttribute('id',investor.investorId);
+        p1.setAttribute('onclick', 'setInvestor(this)');
         p1.innerHTML = investor.investorName;
+    
+    //get investor with get call and get their first location id
         
         var p2 = document.createElement("p");
         p2.setAttribute('class','investorDetailsPar');
@@ -117,8 +124,9 @@ function renderInvestorOppLink(investor) {
     
     var hr = document.createElement("hr");
     hr.style.borderTop = "dotted 3px";
-       
-    td2.appendChild(p1);
+    
+       link.appendChild(p1);
+    td2.appendChild(link);
         td2.appendChild(p2);
         td2.appendChild(p3);
         tr.appendChild(td2);
@@ -127,7 +135,8 @@ function renderInvestorOppLink(investor) {
         newDiv.appendChild(table);
         newDiv.appendChild(hr);
     
-    investorList1.appendChild(newDiv);
+    investorList2.appendChild(newDiv);
+    
     
 };
 
@@ -135,13 +144,6 @@ function renderInvestorOppLink(investor) {
 
 function searchInv(){
     console.log("searching from investors");
- /*var test = $.getJSON("success.json", function(data){ 
-    $.each(data.aaData, function(arrayID,investor){
-                    renderInvestorInvLink(investor);
-					
-				});
- 
- })*/
     console.log("search value: " + searchValue.value);
     folName = searchValue.value;
     investorList1.innerHTML="";
@@ -167,32 +169,25 @@ function searchInv(){
 
 function searchOpp(){
     console.log("searching from opportunities");
- var test = $.getJSON("success.json", function(data){ 
-    $.each(data.aaData, function(arrayID,investor){
-                    renderInvestorOppLink(investor);
-					
-				});
- 
- })
-    console.log("inner: " + searchValue.value);
-    folName = searchValue.value;
-    investorList1.innerHTML="";
-	/*jQuery.ajax({
+    console.log("search value: " + searchOppInvValue.value);
+    folName = searchOppInvValue.value;
+    investorList2.innerHTML="";
+	jQuery.ajax({
 			type: "POST",
 			url: "http://54.69.150.79:8080/embrace2/opportunity/investor/search",
-		data:{"folName": "folName"},
-			contentType: "text/plain",
+		data: JSON.stringify({"folName": searchOppInvValue.value}),
+			contentType: "application/json",
 			dataType: "json",
 			success: function (data, status, jqXHR) {
+                console.log("success");
 				$.each(data.aaData, function(arrayID,investor){
-                    renderInvestor(investor);
+                    renderInvestorOppLink(investor);
 					
 				});
 			},
 	
 			error: function (jqXHR, status) {
-				// error handler
 				alert("Invalid Search");
 			}
-	});*/
+	});
 };

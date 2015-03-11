@@ -77,6 +77,12 @@ $(window).bind('setup', function() {
         searchInv();
     });
     
+        /* button  #oppSearch */
+    $(document).on("click", "#oppSearch", function(evt)
+    {
+        searchOpp();
+    });
+    
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
