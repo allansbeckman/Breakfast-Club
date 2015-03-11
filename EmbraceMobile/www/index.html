@@ -342,6 +342,20 @@
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
                     <a class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
+                    <script>
+                        
+                    $("activitySaveButton").click(function(){
+                        var property = propertyActivity.value;
+                        var action = activityAction.value;
+                        var comment = activityComment.value;
+                        var text = '{"property":property, "action":action, "comment":comment}';
+                        var obj = JSON.parse(text);
+                        var fileWriter = new FileWriter("activityList.txt", true);
+                        fileWriter.open();
+                        fileWriter.writeLine(obj);
+                        fileWriter.close();
+                    });
+                    </script>
                 </div>
 
             </div>
