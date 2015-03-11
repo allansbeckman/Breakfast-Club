@@ -364,11 +364,29 @@ font-weight: bold;color: #000000;border:#FFFFFF; border-style:solid; border-widt
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
                     <script>
+                        function getDate(){
+                            var today = new Date();
+                            var dd = today.getDate();
+                            var mm = today.getMonth()+1; //January is 0!
+                            var yyyy = today.getFullYear();
+
+                            if(dd<10) {
+                                dd='0'+dd
+                                } 
+
+                            if(mm<10) {
+                                mm='0'+mm
+                                } 
+
+                            today = mm+'/'+dd+'/'+yyyy;
+                            return today;
+                        };
                     $("activitySaveButton").click(function(){
                         var property = propertyActivity.value;
                         var action = activityAction.value;
                         var comment = activityComment.value;
-                        var text = '{"property":property, "action":action, "comment":comment}';
+                        var date = getDate();
+                        var text = '{"opportunityStatus":action,"createdDate": date, "propertyAddress":property,"propertyState":"","propertyZip":"" , "comments":comment}';
                         var obj = JSON.parse(text);
                         var fileWriter = new FileWriter("activityList.txt", true);
                         fileWriter.open();
