@@ -321,6 +321,16 @@
                     <br>
                     <a class="button widget uib_w_137 d-margins icon magnifier" data-uib="app_framework/button" data-ver="1" id="activityPropertySearchButton">Search</a>
                     <br>
+                    
+                    <div id="propertySearchResultPopup">
+                        <select id="propertySearchResult"></select>
+                    </div>
+                    <script>
+                        $("#propertySearchResult").change(function(){
+                            $("#propertyActivity").val(propertySearchResult.value);
+                            $("#propertySearchResultPopup").hide();
+                        });    
+                    </script>
                     <p style="margin-left:10px; margin-right:10px">Action:</p>
                     <div>
                         <select style="margin-left:10px; margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" id="activityAction">
@@ -341,8 +351,8 @@
                     <textarea name="comment" id="activityComment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
-                    <a class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
-                    <script>
+                    <a href= "#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
+                    <!--<script>
                         
                     $("activitySaveButton").click(function(){
                         var property = propertyActivity.value;
@@ -355,7 +365,7 @@
                         fileWriter.writeLine(obj);
                         fileWriter.close();
                     });
-                    </script>
+                    </script>-->
                 </div>
 
             </div>
