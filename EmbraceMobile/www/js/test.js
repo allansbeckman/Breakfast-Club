@@ -21,6 +21,21 @@ document.body.appendChild(a);
          }
 });};
 
+function propertySearch(address){
+jQuery.ajax({
+         type: "POST",
+         url: "http://54.69.150.79:8080/embrace2/property/search/",
+    data:{"propertyAddress": "124", "isMobile": "Y"},
+         contentType: "application/json",
+         dataType: "json",
+         success: function (data, status, jqXHR) {
+         },
+
+         error: function (jqXHR, status) {
+             alert("Invalid Login");
+         }
+});};
+
 function loadActivityInfo(name, email, phone) {
     activityInvName.innerHTML = name;
     activityInvEmail.innerHTML = email;
