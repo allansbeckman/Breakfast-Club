@@ -327,9 +327,9 @@
                                     <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
                                 </td>
                                 <td align="left" valign="left">
-                                    <p style="margin-left:25px;font-size:12px">Burton Pierce</p>
-                                    <p style="margin-left:25px;font-size:12px">818-111-2222</p>
-                                    <p style="margin-left:25px;font-size:12px">burton@test.com</p>
+                                    <p id="activityInvName" style="margin-left:25px;font-size:12px"></p>
+                                    <p id="activityInvPhone" style="margin-left:25px;font-size:12px"></p>
+                                    <p id="activityInvEmail" style="margin-left:25px;font-size:12px"></p>
                                 </td>
                             </tr>
 
@@ -619,10 +619,10 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
 
                         </td>
                         <td align="left" valign="left">
-                            <p id="oppDetailsName" style="margin-left:25px;font-size:12px">Burton Pierce</p>
-                            <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px">818-111-2222</p>
+                            <p id="oppDetailsName" style="margin-left:25px;font-size:12px"></p>
+                            <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px"></p>
                             <a id="oppDetailsEmail" href="#Email">
-                                <p id="investOppEmail" style="margin-left:25px;font-size:12px">burton@test.com</p>
+                                <p id="investOppEmail" style="margin-left:25px;font-size:12px"></p>
                             </a>
 
                         </td>
@@ -642,9 +642,12 @@ border-width: 2px;margin-right:10px;max-width:100px">Save</button>
                             <p style="margin-left:25px;font-size:16px">Activities</p>
                         </td>
                         <td align="right" valign="left">
-                            <a href="#Add_Activity" data-transition="fade">
+                            <a id="OppDetailsAddActivity" href="#Add_Activity" data-transition="fade">
                                 <img style="height:32px; width:32px;" src="images/plus_button.svg" border="0">
                             </a>
+                            <script type="text/javascript">
+                                OppDetailsAddActivity.addEventListener('click', function(event) { loadActivityInfo(oppDetailsName.innerHTML, investOppEmail.innerHTML, oppDetailsNumber.innerHTML); });
+                            </script>
                         </td>
                     </tr>
                 </tbody>

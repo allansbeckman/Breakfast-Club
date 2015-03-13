@@ -21,6 +21,12 @@ document.body.appendChild(a);
          }
 });};
 
+function loadActivityInfo(name, email, phone) {
+    activityInvName.innerHTML = name;
+    activityInvEmail.innerHTML = email;
+    activityInvPhone.innerHTML = phone;
+}
+
 function renderInvestorInvLink(investor) {
     
      var newDiv = document.createElement("div");
