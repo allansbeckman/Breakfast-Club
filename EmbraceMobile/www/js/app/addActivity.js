@@ -3,7 +3,7 @@ define([],function(){
             searchProperty(propertyActivity.value);
         });
        activitySaveButton.addEventListener('click',function(){
-            addActivity();
+            addActivity(propertyActivity, activityAction, activityComment );
         });
 
 
@@ -23,5 +23,8 @@ define([],function(){
             error: function(jqXHR, status){
                 alert("invalid property address");}    
         });
+    }
+    function addActivity(property, action,comment){
+        url=
     }
 });
