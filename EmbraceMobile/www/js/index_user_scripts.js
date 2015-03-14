@@ -64,12 +64,6 @@ $(window).bind('setup', function() {
     {
         login(username.value, pass.value);
     });
-    
-        /* button  Login */
-    $(document).on("click", ".uib_w_4", function(evt)
-    {
-        /* your code goes here */ 
-    });
      
             /* button  #searchButton */
     $(document).on("click", "#searchButton", function(evt)
