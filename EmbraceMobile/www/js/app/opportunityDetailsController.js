@@ -1,13 +1,13 @@
  define(['app/opportunityDetailsModel', 'app/opportunityDetails'], function(opportunityDetailsModel, opportunityDetails){
      
      investorList2.addEventListener('click', function(){
-        loadOpportunityDetails('45b5617d-c125-11e4-aaa2-28d2444bf619' ,'82f33e27-ce22-11e3-b4f7-000c29965b89');
-         loadInvestorDetails('82f33e27-ce22-11e3-b4f7-000c29965b89');
+        loadOpportunityDetails(window.clickedInvestor ,window.locationId);
+         loadInvestorDetails(window.clickedInvestor);
      });
      
      detailsBody.addEventListener('click', function(){
-        loadOpportunityDetails('45b5617d-c125-11e4-aaa2-28d2444bf619' ,'82f33e27-ce22-11e3-b4f7-000c29965b89');
-        loadInvestorDetails('82f33e27-ce22-11e3-b4f7-000c29965b89'); 
+        loadOpportunityDetails(window.clickedInvestor ,window.locationId);
+        loadInvestorDetails(window.clickedInvestor); 
      });
      
      
@@ -33,7 +33,7 @@
          
      }
      
-      function loadOpportunityDetails(locationId, investorId){
+      function loadOpportunityDetails(investorId, locationId){
           opportunityDetailsModel.reset();
           jQuery.ajax({
          type: "POST",

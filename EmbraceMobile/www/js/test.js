@@ -103,6 +103,7 @@ function renderInvestorInvLink(investor) {
 
 function renderInvestorOppLink(investor) {
     console.log("render inv opp link");
+    window.locationId = investor.locationId;
     
       var newDiv = document.createElement("div");
         
@@ -172,7 +173,7 @@ function searchInv(){
 	jQuery.ajax({
 			type: "POST",
 			url: "http://54.69.150.79:8080/embrace2/opportunity/investor/search",
-		data: JSON.stringify({"folName": searchValue.value}),
+		data: JSON.stringify({"folName": searchValue.value, "ilmId": "106de0af-5ef9-11e4-9512-02d9f1cc69ce"}),
 			contentType: "application/json",
 			dataType: "json",
 			success: function (data, status, jqXHR) {
@@ -197,7 +198,7 @@ function searchOpp(){
 	jQuery.ajax({
 			type: "POST",
 			url: "http://54.69.150.79:8080/embrace2/opportunity/investor/search",
-		data: JSON.stringify({ "folName": searchOppInvValue.value, "ilmId": window.ilmId}),
+		data: JSON.stringify({ "folName": searchOppInvValue.value, "ilmId": "106de0af-5ef9-11e4-9512-02d9f1cc69ce"}),
 			contentType: "application/json",
 			dataType: "json",
 			success: function (data, status, jqXHR) {
