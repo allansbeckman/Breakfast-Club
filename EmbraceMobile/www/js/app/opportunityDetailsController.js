@@ -12,7 +12,6 @@
      
      
      function loadInvestorDetails(investorId) {
-         console.log('load investor details called');
          jQuery.ajax({
          type: "GET",
          url: "http://54.69.150.79:8080/embrace2/opportunity/investor/details/" + investorId,
@@ -25,11 +24,8 @@
             investOppEmail.innerHTML = data.investorEmail;
          },
          error: function (jqXHR, status){
-             console.log('didn\'t work');
-             console.log(status);
          }
 });
-         console.log("out of get call");
          
      }
      
@@ -44,8 +40,6 @@
          success: function (data, status, jqXHR) {
              
             $.each(data.aaData, function(arrayIndex, activity){ 
-                
-               
              opportunityDetailsModel.add(new opportunityDetails({
                  opportunityStatus: activity.activityType,
                  createdDate: activity.createdDate,
@@ -63,6 +57,5 @@
          error: function (jqXHR, status) {
              // error handler
              console.log(status);
-             alert(status);
          }});}
 });

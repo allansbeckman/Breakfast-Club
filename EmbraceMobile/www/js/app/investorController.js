@@ -1,8 +1,9 @@
  define(['app/investorModel', 'app/Investor'], function(investorModel, Investor){
  
      investorsP.addEventListener('click', function(){
-       
         loadInvestor(window.clickedInvestor);
+        searchValue.value = '';
+        //investorList1.innerHTML = "";
      });
      
       function loadInvestor(id){ 

@@ -152,6 +152,7 @@ define(['app/investorModel'], function(investorModel){
     
         console.log("append investor profile card");
         investorCard.appendChild(newDiv);
+        
     }
     
     investorModel.on('add', renderLastInvestor);
