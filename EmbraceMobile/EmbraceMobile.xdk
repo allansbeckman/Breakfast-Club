@@ -6,7 +6,11 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "bf558728-f646-49c1-a768-6130e4225a1d",
+<<<<<<< HEAD
       "lastModifiedDate": 1426202299794,
+=======
+      "lastModifiedDate": 1424983160216,
+>>>>>>> andrews_branch
       "creationDate": 1422662722182
     },
     "XDK-app-designer": "true",

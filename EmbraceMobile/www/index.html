@@ -107,6 +107,31 @@
         <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+        
+        <!-- scripts for variables and universal on click functions-->
+        <script type="text/javascript">window.ilmId = ''</script>
+        <script type="text/javascript">
+            window.emailReturnPage = ''
+        </script>
+        <script>
+            window.locationId = ""
+        </script>
+        <script>
+            locationClick = function(location){
+                        console.log("location click: " + location.id);
+                        window.locationId = location.id; 
+                    };
+        </script>
+        <script>
+            window.clickedInvestor = "not someone"
+        </script>
+        <script>
+            setInvestor = function(investor){
+                console.log("setinvestor called: " + investor.id);
+                    window.clickedInvestor = investor.id;
+            };
+        </script>
+
     </head>
     <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
     <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
@@ -118,113 +143,45 @@
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
 
-        <header class="wrapping-col wrap-element uib_w_22 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-1"><a class="button backButton">Back</a>
-            <h1>Email</h1>
+        
+           <!--Header with no back button-->
+        <header class="wrapping-col wrap-element uib_w_132" data-uib="app_framework/header" data-ver="2" id="af-header-16" 
+                style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
         </header>
-        <header class="wrapping-col wrap-element uib_w_32 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
-            <h1>Todd Packer</h1>
-        </header>
-
-        <header class="wrapping-col wrap-element uib_w_47 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-3"><a class="button backButton">Back</a>
-            <h1>Tasks</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_47 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-4"><a class="button backButton">Back</a>
-            <h1>Messages Feed</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_49 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-5"><a class="button backButton">Back</a>
-            <h1>Ron Swanson</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_56 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-6"><a class="button backButton">Back</a>
-            <h1>Register For Home Union Account</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_70 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-7"><a class="button backButton">Back</a>
-            <h1>Activity Feed</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_74 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-8"><a class="button backButton">Back</a>
-            <h1>Investor Profile</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_75 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-9"><a class="button backButton">Back</a>
-            <h1>Activity Details</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_76 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-10"><a class="button backButton">Back</a>
-            <h1>Opportunity</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_78 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-11"><a class="button backButton">Back</a>
-            <h1>Property Details</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_110 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-12"><a class="button backButton">Back</a>
-            <h1>Property Details</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_117 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-13"><a class="button backButton">Back</a>
-            <h1>Activities Feed</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_118 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-14"><a class="button backButton">Back</a>
-            <h1>Investors</h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_119 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-15"><a class="button backButton">Back</a>
-            <h1>Properties</h1>
-        </header>
-
-        <header class="wrapping-col wrap-element uib_w_131 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-0" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%;
-    background-repeat: no-repeat;
-">
+        
+        <!--Header with back button-->
+        <header class="wrapping-col wrap-element uib_w_131 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-0" 
+                style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
             <a class="button backButton">
                 <p style="color: #3D9EDD">&lt; Back</p>
             </a>
-            <h1></h1>
         </header>
-        <header class="wrapping-col wrap-element uib_w_132" data-uib="app_framework/header" data-ver="2" id="af-header-16" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%;
-    background-repeat: no-repeat;
-">
-            <h1></h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_133" data-uib="app_framework/header" data-ver="2" id="af-header-17" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%;
-    background-repeat: no-repeat;
-">
-            <a class="button backButton">
-                <p style="color: #3D9EDD">&lt; Back</p>
-            </a>
-            <h1></h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_134" data-uib="app_framework/header" data-ver="2" id="af-header-18" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%;
-    background-repeat: no-repeat;
-">
-            <a class="button backButton">
-                <p style="color: #3D9EDD">&lt; Back</p>
-            </a>
-            <h1></h1>
-        </header>
-        <header class="wrapping-col wrap-element uib_w_136" data-uib="app_framework/header" data-ver="2" id="af-header-19">
-            <h1></h1>
-        </header>
+        
+       
         <div id="content" class="uwrap">
-            <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                    <img src="images/Strabburg.homeunion">
-                    <figcaption data-position="bottom"></figcaption>
-                </figure>
-            </div>
             <div class="upage vertical-col panel AppBackground" id="mainpage" data-header="af-header-16" data-footer="none">
 
                 <div class="widget uib_w_5 d-margins HeadingText" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle"></div>
-                    <div class="widget-container right-receptacle"></div>
-                    <div>
-                        <p>Login to your account</p>
-                    </div>
+                    <p>Login to your account</p>
                 </div>
 
                 <div class="table-thing with-label widget uib_w_6 d-margins" data-uib="app_framework/input" data-ver="1">
                     <input class="wide-control" placeholder="Username" type="text" id="username" value="admin">
                 </div>
+                
                 <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="app_framework/input" data-ver="1">
-                    <input class="wide-control" placeholder="Password" type="text" id="pass" value="password">
+                    <input class="wide-control" placeholder="Password" type="password" id="pass" value="password">
                 </div>
+                
                 <div class="widget uib_w_8 d-margins" data-uib="app_framework/checkbox" data-ver="1">
                     <input type="checkbox" id="af-checkbox-0">
                     <label class="content-box" for="af-checkbox-0">Remember Me</label>
-                </div><a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1">Login</a>
+                </div>
+                
+                <a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1">Login</a>
             </div>
+            
+            
             <div class="upage panel AppBackground" id="landingPage" data-header="af-header-0" data-footer="none">
 
                 <div class="upage-outer">
@@ -236,68 +193,40 @@
                             </a>
 
                             <img style="margin-left:25px; margin-right:25px; margin-top: 15px; float:center; max-heght:64px; max-width:64px" src="images/properties.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Investors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Properties</h1>
                         </div>
 
                         <br>
+                        
                         <div align="center">
                             <a href="#MyOpportunities">
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64px" src="images/opportunities.png">
                             </a>
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/tasklist.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
+                        
                         <br>
                         <div align="center">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64" src="images/messages.png">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/blanko.png">
-                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
+                            <h1 style="font-size:16px; margin: 15px; text-align: center; width: 256"> Messages
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  
+                            </h1>
                         </div>
 
                     </div>
 
-                    <div class="inner-element uib_w_59 uib_sidebar leftbar swipe bar-bg" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}">
-                        <div class="sidebar-content content-area vertical-col">
-
-                            <div class="widget uib_w_65 d-margins background HeadingText" data-uib="media/text" data-ver="0">
-                                <div class="widget-container left-receptacle"></div>
-                                <div class="widget-container right-receptacle"></div>
-                                <div>
-                                    <p>Tools</p>
-                                </div>
-                            </div>
-                            <ul class="list widget uib_w_66 d-margins" data-uib="app_framework/listview" data-ver="1">
-                                <li class="widget uib_w_67" data-uib="app_framework/listitem" data-ver="1">
-                                    <a class="icon camera">Camera</a>
-                                </li>
-                                <li class="widget uib_w_68" data-uib="app_framework/listitem" data-ver="1">
-                                    <a class="icon mail" href="#Email" data-transition="fade">Email</a>
-                                </li>
-                                <li class="widget uib_w_69" data-uib="app_framework/listitem" data-ver="1" id="Tasks_Sidebar">
-                                    <a class="icon check" href="#TasksStart" data-transition="fade">Tasks</a>
-                                </li>
-                                <li class="widget uib_w_70" data-uib="app_framework/listitem" data-ver="1">
-                                    <a class="icon message">Comment</a>
-                                </li>
-                                <li class="widget uib_w_71" data-uib="app_framework/listitem" data-ver="1" id="logout_menu">
-                                    <a class="icon error" href="#mainpage" data-transition="fade">Logout</a>
-                                </li>
-                            </ul>
-                            <div class="widget uib_w_130 d-margins" data-uib="media/text" data-ver="0">
-                                <div class="widget-container left-receptacle"></div>
-                                <div class="widget-container right-receptacle"></div>
-                                <div>
-                                    <p>&nbsp;</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
                 </div>
-                <div class="upage vertical-col left panel" id="Add_Activity" data-header="af-header-17" data-footer="none">
+                
+                <div class="upage vertical-col left panel" id="Add_Activity" data-header="af-header-0" data-footer="none">
                     <div>
-                        <p style="font-size:16px;
-							  text-decoration:underline;margin-left:25px;">Activity</p>
+                        <p style="font-size:16px; text-decoration:underline;margin-left:25px;">Activity</p>
                     </div>
+                    
                     <table width="300" cellpadding="5">
                         <tbody>
                             <tr>
@@ -305,22 +234,40 @@
                                     <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
                                 </td>
                                 <td align="left" valign="left">
-                                    <p style="margin-left:25px;font-size:12px">Burton Pierce</p>
-                                    <p style="margin-left:25px;font-size:12px">818-111-2222</p>
-                                    <p style="margin-left:25px;font-size:12px">burton@test.com</p>
+                                    <p id="activityInvName" style="margin-left:25px;font-size:12px"></p>
+                                    <p id="activityInvPhone" style="margin-left:25px;font-size:12px"></p>
+                                    <p id="activityInvEmail" style="margin-left:25px;font-size:12px"></p>
                                 </td>
                             </tr>
 
                         </tbody>
                     </table>
+                    
                     <br>
+                    
                     <hr style="color: #000000;background-color: #000000;height: 5px;">
                     <br>
+                    
                     <p style="margin-left:10px;margin-right:10px">Property:</p>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" type="text" class="tftextinput" name="q" size="21" maxlength="120" placeholder="PropertyActivity" id="propertyActivity">
                     <br>
                     <a class="button widget uib_w_137 d-margins icon magnifier" data-uib="app_framework/button" data-ver="1" id="activityPropertySearchButton">Search</a>
+=======
+                    <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
+                           type="text" class="tftextinput" name="q" size="21" maxlength="120" id="propertyActivity">
+                    <br>
+                    
+                    <button id="propertySearchButton" type="submit" value="Search" 
+                            style="float:right;font-family: Verdana, Arial, Helvetica, sans-serif;  font-size: 12px;
+                            font-weight: bold;color: #000000;border:#FFFFFF; border-style:solid; border-width:2px; 
+                            margin-right:10px; max-width:100px">Search
+                    </button>
+                    <script>
+                        propertySearchButton.addEventListener('click', function(event) { propertySearch(propertySearchButton.value); });
+                    </script>
+>>>>>>> andrews_branch
                     <br>
                     
                     <div id="propertySearchResultPopup">
@@ -374,124 +321,102 @@
                     <textarea name="comment" id="activityComment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                     <a href= "#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--<script>
                         
+=======
+                    <script>
+                        function getDate(){
+                            var today = new Date();
+                            var dd = today.getDate();
+                            var mm = today.getMonth()+1; //January is 0!
+                            var yyyy = today.getFullYear();
+
+                            if(dd<10) {
+                                dd='0'+dd
+                                } 
+
+                            if(mm<10) {
+                                mm='0'+mm
+                                } 
+
+                            today = mm+'/'+dd+'/'+yyyy;
+                            return today;
+                        };
+>>>>>>> andrews_branch
                     $("activitySaveButton").click(function(){
                         var property = propertyActivity.value;
                         var action = activityAction.value;
                         var comment = activityComment.value;
+<<<<<<< HEAD
                         var text = '{"property":property, "action":action, "comment":comment}';
+=======
+                        var date = getDate();
+                        var text = '{"opportunityStatus":action,"createdDate": date, "propertyAddress":property,"propertyState":"","propertyZip":"" , "comments":comment}';
+>>>>>>> andrews_branch
                         var obj = JSON.parse(text);
                         var fileWriter = new FileWriter("activityList.txt", true);
                         fileWriter.open();
                         fileWriter.writeLine(obj);
                         fileWriter.close();
                     });
+<<<<<<< HEAD
                     </script>-->
 =======
                     
                     <a href= "#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
 >>>>>>> Stashed changes
+=======
+                    </script>
+                    
+                    <button type="submit" value="Save" id ="activitySaveButton"style="float: right;font-family: Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: #003366
+                        border: #00ffff;
+                        border-style: solid;
+                        border-width: 2px;margin-right:10px;max-width:100px">Save
+                    </button>
+>>>>>>> andrews_branch
                 </div>
 
             </div>
 
-            <div class="upage vertical-col left panel" id="AndrewHTML5Adventure" data-header="none" data-footer="none">
-
-                <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
-                <input align="center" id="color" value="red">Polygon Color
-                <input align="center" id="color2" value="black">Vertex Color
-            </div>
-            <div class="upage vertical-col panel" id="Email" data-header="af-header-18" data-footer="none">
+      
+            <div class="upage vertical-col panel" id="Email" data-header="af-header-0" data-footer="none">
                 <div class="table-thing with-label widget uib_w_23 d-margins" data-uib="app_framework/input" data-ver="1">
                     <label class="narrow-control label-top-left">To:</label>
-
-                    <input class="wide-control" type="text">
+                    <input id="emailTo" class="wide-control" type="text">
                 </div>
 
                 <div class="table-thing with-label widget uib_w_25 d-margins" data-uib="app_framework/input" data-ver="1">
                     <label class="narrow-control label-top-left">Subject:</label>
 
-                    <input class="wide-control" type="text">
+                    <input id="emailSubject" class="wide-control" type="text">
                 </div>
                 <div class="table-thing with-label widget uib_w_26 d-margins" data-uib="app_framework/textarea" data-ver="1">
                     <label class="narrow-control label-top-left">Message:</label>
 
-                    <textarea class="wide-control" rows="10" wrap="soft"></textarea>
+                    <textarea id="emailMessage" class="wide-control" rows="10" wrap="soft"></textarea>
                 </div>
                 <a class="button widget uib_w_27 icon right" data-uib="app_framework/button" data-ver="1">Send</a>
             </div>
-
-            <div class="widget uib_w_80 scale-image d-margins" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                    <img src="images/Strabburg.jpg">
-                    <figcaption data-position="bottom"></figcaption>
-                </figure>
-            </div>
-            <div class="widget uib_w_92 d-margins" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle"></div>
-                <div class="widget-container right-receptacle"></div>
-                <div>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-            <div class="widget uib_w_87 scale-image d-margins" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                    <img src="images/Strabburg.jpg">
-                    <figcaption data-position="bottom"></figcaption>
-                </figure>
-            </div>
-            <div class="sbs-container widget uib_w_93 d-margins" data-uib="layout/side_by_side" data-ver="0">
-                <div class="leftContent widget-container"></div>
-                <div class="rightContent widget-container"></div>
-            </div>
-
-            <div class="widget uib_w_109 d-margins" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle"></div>
-                <div class="widget-container right-receptacle"></div>
-                <div>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-
-            <div class="widget uib_w_80 scale-image d-margins" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                    <img src="images/Strabburg.jpg">
-                    <figcaption data-position="bottom"></figcaption>
-                </figure>
-            </div>
-            <div class="widget uib_w_92 d-margins" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle"></div>
-                <div class="widget-container right-receptacle"></div>
-                <div>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-            <div class="widget uib_w_87 scale-image d-margins" data-uib="media/img" data-ver="0">
-                <figure class="figure-align">
-                    <img style="float: left" src="images/Strabburg.jpg">
-                    <figcaption data-position="bottom"></figcaption>
-                </figure>
-            </div>
-            <div class="sbs-container widget uib_w_93 d-margins" data-uib="layout/side_by_side" data-ver="0">
-                <div class="leftContent widget-container"></div>
-                <div class="rightContent widget-container"></div>
-            </div>
-
-        </div>
+            
+            
         <script src="js/test.js"></script>
 
         <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
 
             <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
-                <label class="narrow-control label-top-left">Investors</label>
-
-                <input class="wide-control" type="text" placeholder="Search by Investor Name">
+                <label class="narrow-control label-top-left" for="searchValue">Investors</label>
+                <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchValue">
             </div>
+            <a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1" id="searchButton">Search</a>
             <br>
             <hr style="color: 000000;">
+<<<<<<< HEAD
 
             <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
                 <div class="widget-container left-receptacle">
@@ -565,106 +490,28 @@
                     </p>
                     <p></p>
                 </div>
+=======
+            <div id="investorsP">
+                <div id="investorList1"></div>
+>>>>>>> andrews_branch
             </div>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <a class="button widget uib_w_129" data-uib="app_framework/button" data-ver="1">See More...</a>
-
         </div>
 
         <div class="upage panel vertical-col" id="MyOpportunities" data-header="af-header-0" data-footer="none">
 
             <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
-                <label class="narrow-control label-top-left">Opportunities</label>
-
-                <input class="wide-control" type="text" placeholder="Search by Investor Name">
-            </div>
+                <label class="narrow-control label-top-left" for="searchOppInvValue">Opportunities</label>
+                <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchOppInvValue">
+            </div><a class="button widget uib_w_138" data-uib="app_framework/button" data-ver="1" id="oppSearch">Search</a>
             <br>
             <hr style="color: 000000;">
-
-            <a href="#OppDetails">
-                <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle">
-                        <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                            <figure class="figure-align">
-                                <img style="height: 48px; width: 48px; margin-right: 15px;" src="images/Investors.png">
-
-                                <figcaption data-position="bottom"></figcaption>
-                            </figure>
-
-                        </div>
-                    </div>
-                    <div class="widget-container right-receptacle">
-
-                    </div>
-
-                    <div>
-                        <p>Burton Peirce
-                            <br>818-111-2222
-                            <br>burton@test.com
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle">
-                    <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                        <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
-
-                            <figcaption data-position="bottom"></figcaption>
-                        </figure>
-
-                    </div>
-                </div>
-                <div class="widget-container right-receptacle">
-
-                </div>
-
-                <div>
-                    <p>Johanna Monson
-                        <br>818-111-2222
-                        <br>burton@test.com
-                    </p>
-                    <p></p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
-                <div class="widget-container left-receptacle">
-                    <div class="widget uib_w_77" data-uib="media/img" data-ver="0">
-                        <figure class="figure-align">
-                            <img style="height: 48px; width: 48px; margin-right: 15px" src="images/Investors.png">
-
-                            <figcaption data-position="bottom"></figcaption>
-                        </figure>
-
-                    </div>
-                </div>
-                <div class="widget-container right-receptacle">
-
-                </div>
-
-                <div>
-                    <p>John Smith
-                        <br>818-111-2222
-                        <br>burton@test.com
-                    </p>
-                    <p></p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: dotted 3px;">
-            <a class="button widget uib_w_129" data-uib="app_framework/button" data-ver="1">See More...</a>
-
+            <div id="investorList2"></div>
+           
         </div>
 
-        <div class="upage vertical-col panel" id="InvestorProfile" data-header="af-header-18" data-footer="none">
-
+        <div class="upage vertical-col panel" id="InvestorProfile" data-header="af-header-0" data-footer="none">
             <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
+<<<<<<< HEAD
 
                 <div>
 
@@ -704,279 +551,145 @@
 
                 <div class="widget-container right-receptacle"></div>
 
+=======
+>>>>>>> andrews_branch
                 <div>
-
-                    <p>Investment Locations</p>
-
+                    <p style="margin-left: 15px">Investor Profile</p>
+                    <div id="investorCard"></div>
+                    <div style="margin-left: 10px" id="investorSolutionSpecialist"></div>
                 </div>
-
             </div>
 
-            <div id="detailInvestmentLocations"></div>
-
-            <table border="0px" width="100%" style="border-collapse:collapse">
+            <p style="margin-left: 15px; font-size:14px">Investor Breadbox <a align="left" id="breadboxSave">(save)</a>
+            </p>
+            <table border="1px" width="90%" style=" margin-left: 15px; margin-right: 15px; border-radius: 5px">
 
                 <tbody>
-
                     <tr>
-
+                        <td align="left" style="border:none; margin-left: 15px">
+                            <p style="margin-left: 5px; font-size: 12px"><b>Investment Amount</b>
+                            </p>
+                            <p id="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
                         <td align="left" style="border:none">
+<<<<<<< HEAD
 
                             <p><u><b> <a href="#OppDetails">Cleveland</a></b></u>
+=======
+                            <p style="font-size: 12px"> <b>Price Range</b> 
+>>>>>>> andrews_branch
                             </p>
-
+                            <p id="priceRange" contenteditable="true"></p>
                         </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
-                            </p>
-
-                            <p>Flint Westwood</p>
-
-                        </td>
-
                     </tr>
-
                     <tr>
-
+                        <td align="left" style="border:none; margin-left: 15px">
+                            <p style="margin-left: 5px; font-size: 12px"><b>Buying time frame</b>
+                            </p>
+                            <p id="buyingTimeFrame" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
                         <td align="left" style="border:none">
-
-                            <p><u><b>Houston</b></u>
+                            <p style="font-size: 12px"> <b>Location</b> 
                             </p>
-
+                            <p id="breadboxLocation" contenteditable="true"></p>
                         </td>
-
-                        <td align="right" style="border:none">
-
-                            <p><b><u>ILM:</u></b>
+                    </tr>
+                    <tr>
+                        <td align="left" style="border:none; margin-left: 15px">
+                            <p style="margin-left: 5px; font-size: 12px"><b>Pre-approved?</b>
                             </p>
-
-                            <p>Jennifer Ramirez</p>
-
+                            <p id="preApproved" contenteditable="true" style="margin-left: 5px"></p>
                         </td>
-
+                        <td align="left" style="border:none">
+                            <p style="font-size: 12px"> <b>CAP rate range</b> 
+                            </p>
+                            <p id="capRateRange" contenteditable="true"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left" style="border:none; margin-left: 15px">
+                            <p style="margin-left: 5px; font-size: 12px"><b>Comments</b>
+                            </p>
+                            <p id="breadboxComments" contenteditable="true" style="margin-left: 5px"></p>
+                        </td>
                     </tr>
 
                 </tbody>
-
             </table>
 
-            <a class="button widget uib_w_135 d-margins" data-uib="app_framework/button" data-ver="1">See
+            <p style="margin-left: 15px; font-size: 14px">Investment Locations</p>
 
-more....</a>
+            <table border="1px" width="90%" style=" margin-left: 15px; border-radius: 5px">
+
+                <tbody id="detailsBody">
+
+                </tbody>
+            </table>
 
         </div>
 
-        _____________________________________________________________________________________________
+        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-0" data-footer="none">
+            <div>
+                <p style="margin-left:6px">Opportunity Details</p>
+            </div>
+            <table width="300" cellpadding="5">
+                <tbody>
+                    <tr>
+                        <td align="center" valign="center">
+                            <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
+                        </td>
+                        <td align="left" valign="left">
+                            <p id="oppDetailsName" style="margin-left:25px;font-size:12px"></p>
+                            <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px"></p>
+                            <a id="oppDetailsEmail" href="#Email">
+                                <p id="investOppEmail" style="margin-left:25px;font-size:12px"></p>
+                            </a>
 
-        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-18" data-footer="none">
-
-            <div class="widget uib_w_16 d-margins OpportunityDetails" data-uib="media/text" data-ver="0">
-
-                <div class="widget-container left-receptacle"></div>
-
-                <div class="widget-container right-receptacle"></div>
-
-                <div>
-
-                    <p>Opportunity Details</p>
-
-                </div>
-
-                <table width="300" cellpadding="5">
-
-                    <tbody>
-
-                        <tr>
-
-                            <td align="center" valign="center">
-
-                                <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
-
-                            </td>
-
-                            <td align="left" valign="left">
-
-                                <p style="margin-left:25px;font-size:12px">Burton Pierce</p>
-
-                                <p style="margin-left:25px;font-size:12px">818-111-2222</p>
-
-                                <a href="#Email">
-                                    <p style="margin-left:25px;font-size:12px">burton@test.com</p>
-                                </a>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <p style="margin-left:6px">Investment Location: Cleveland</p>
             </div>
 
-            <div class="widget uib_w_20 d-margins" data-uib="media/text" data-ver="0">
-
-                <div class="widget-container left-receptacle"></div>
-
-                <div class="widget-container right-receptacle"></div>
-
-                <div>
-
-                    <p>Investment Location: Cleveland</p>
-
-                </div>
-
-            </div>
+            <hr style="color: #000000;background-color: #000000;height: 5px;">
 
             <table width="300" cellpadding="5">
-
                 <tbody>
-
                     <tr>
-
                         <td align="left" valign="center">
-
                             <p style="margin-left:25px;font-size:16px">Activities</p>
-
                         </td>
-
                         <td align="right" valign="left">
-
-                            <a class="button widget uib_w_23 icon add" data-uib="app_framework/button" data-="" ver="1" href="#Add_Activity" data-transition="fade"></a>
-
+                            <a id="OppDetailsAddActivity" href="#Add_Activity" data-transition="fade">
+                                <img style="height:32px; width:32px;" src="images/plus_button.svg" border="0">
+                            </a>
+                            <script type="text/javascript">
+                                OppDetailsAddActivity.addEventListener('click', function(event) {
+                                loadActivityInfo(oppDetailsName.innerHTML, investOppEmail.innerHTML, oppDetailsNumber.innerHTML); });
+                            </script>
                         </td>
-
                     </tr>
-
                 </tbody>
-
             </table>
-
-            <hr>
+            <hr style="color: #000000;background-color: #000000;height: 5px;">
 
             <br>
 
-            <table border="1px" width="100%" style="border-collapse:collapse">
-
-                <tbody>
-
-                    <tr>
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Offer Accepted</b></u>
-
-                            </p>
-
-                            <p>02/12/2015 | 2:30 pm</p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p>10911 Mercury STREET</p>
-
-                            <p>Jacksonville, FL 32250</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td colspan="2" align="center" style="border-top:none">
-
-                            <p style="display:inline"><b>Comments: </b>
-
-                            </p>
-
-                            <p style="display:inline">Offer accepted by seller.</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Offer Submitted</b></u>
-
-                            </p>
-
-                            <p>02/10/2015 | 1:30 pm</p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p>10911 Mercury STREET</p>
-
-                            <p>Jacksonville, FL 32250</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td colspan="2" align="center" style="border-top:none">
-
-                            <p style="display:inline"><b>Comments: </b>
-
-                            </p>
-
-                            <p style="display:inline">Offer accepted by seller.</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td align="left" style="border:none">
-
-                            <p><u><b>Property Review</b></u>
-
-                            </p>
-
-                            <p>02/8/2015 | 3:30 pm</p>
-
-                        </td>
-
-                        <td align="right" style="border:none">
-
-                            <p>275 Mayor DRIVE</p>
-
-                            <p>Spring, TX 77373</p>
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td colspan="2" align="center" style="border-top:none">
-
-                            <p style="display:inline"><b>Comments: </b>
-
-                            </p>
-
-                            <p style="display:inline">Investor did not like the property due to neighborhood condition.</p>
-
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+            <div id="oppDetailsClick">
+                <div id="oppDetailsInfo"></div>
+            </div>
             <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
 
         </div>
+        <script type="text/javascript">
+                document.getElementById('oppDetailsEmail').addEventListener('click', function(event) 
+                                                                                                    {
+                    document.getElementById('emailTo').value = document.getElementById('investOppEmail').innerHTML;
+                    window.emailReturnPage = '#OppDetails';
+                });
+        </script>
 
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/underscore.js"></script>

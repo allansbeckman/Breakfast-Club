@@ -8,6 +8,7 @@ jQuery.ajax({
          dataType: "json",
          success: function (data, status, jqXHR) {
              var a = document.createElement('a');
+             window.ilmId = data.userId;
 a.href = "#landingPage";
 document.body.appendChild(a);
              a.click();
@@ -20,17 +21,27 @@ document.body.appendChild(a);
          }
 });};
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> andrews_branch
 function propertySearch(address){
 jQuery.ajax({
          type: "POST",
          url: "http://54.69.150.79:8080/embrace2/property/search/",
+<<<<<<< HEAD
     data:{"propertyAddress": "471", "isMobile": "Y"},
          contentType: "application/json",
          dataType: "json",
          success: function (data, status, jqXHR) {
              alert("success");
+=======
+    data:{"propertyAddress": "124", "isMobile": "Y"},
+         contentType: "application/json",
+         dataType: "json",
+         success: function (data, status, jqXHR) {
+>>>>>>> andrews_branch
          },
 
          error: function (jqXHR, status) {
@@ -214,5 +225,9 @@ function searchOpp(){
 				alert("Invalid Search");
 			}
 	});
+<<<<<<< HEAD
 };
 >>>>>>> Stashed changes
+=======
+};
+>>>>>>> andrews_branch
