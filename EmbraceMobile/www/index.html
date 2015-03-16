@@ -249,12 +249,11 @@
                     <br>
                     
                     <p style="margin-left:10px;margin-right:10px">Property:</p>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" type="text" class="tftextinput" name="q" size="21" maxlength="120" placeholder="PropertyActivity" id="propertyActivity">
                     <br>
                     <a class="button widget uib_w_137 d-margins icon magnifier" data-uib="app_framework/button" data-ver="1" id="activityPropertySearchButton">Search</a>
-=======
+
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
                            type="text" class="tftextinput" name="q" size="21" maxlength="120" id="propertyActivity">
                     <br>
@@ -267,14 +266,14 @@
                     <script>
                         propertySearchButton.addEventListener('click', function(event) { propertySearch(propertySearchButton.value); });
                     </script>
->>>>>>> andrews_branch
+
                     <br>
                     
                     <div id="propertySearchResultPopup">
                         <select id="propertySearchResult"></select>
                     </div>
                     <script>
-=======
+
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
                            type="text" class="tftextinput" name="q" size="21" maxlength="120" id="propertyActivity">
                     <div class = "hide">
@@ -289,18 +288,18 @@
                     <div id="propertySearchResultPopup">
                         <select id="propertySearchResult"></select>
                     </div>
-                    <!--<script>
->>>>>>> Stashed changes
+                    <!--
+                            <script>
+
                         $("#propertySearchResult").change(function(){
                             $("#propertyActivity").val(propertySearchResult.value);
                             $("#propertySearchResultPopup").hide();
                         });    
-<<<<<<< Updated upstream
+
                     </script>
-=======
-                    </script>-->
+                    -->
                     <br>
->>>>>>> Stashed changes
+
                     <p style="margin-left:10px; margin-right:10px">Action:</p>
                     <div>
                         <select style="margin-left:10px; margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" id="activityAction">
@@ -321,12 +320,12 @@
                     <textarea name="comment" id="activityComment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
+
                     <a href= "#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--<script>
                         
-=======
+
                     <script>
                         function getDate(){
                             var today = new Date();
@@ -345,41 +344,27 @@
                             today = mm+'/'+dd+'/'+yyyy;
                             return today;
                         };
->>>>>>> andrews_branch
                     $("activitySaveButton").click(function(){
                         var property = propertyActivity.value;
                         var action = activityAction.value;
                         var comment = activityComment.value;
-<<<<<<< HEAD
+
                         var text = '{"property":property, "action":action, "comment":comment}';
-=======
+
                         var date = getDate();
                         var text = '{"opportunityStatus":action,"createdDate": date, "propertyAddress":property,"propertyState":"","propertyZip":"" , "comments":comment}';
->>>>>>> andrews_branch
                         var obj = JSON.parse(text);
                         var fileWriter = new FileWriter("activityList.txt", true);
                         fileWriter.open();
                         fileWriter.writeLine(obj);
                         fileWriter.close();
                     });
-<<<<<<< HEAD
+
                     </script>-->
-=======
+
                     
                     <a href= "#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
->>>>>>> Stashed changes
-=======
-                    </script>
-                    
-                    <button type="submit" value="Save" id ="activitySaveButton"style="float: right;font-family: Verdana, Arial, Helvetica, sans-serif;
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: #003366
-                        border: #00ffff;
-                        border-style: solid;
-                        border-width: 2px;margin-right:10px;max-width:100px">Save
-                    </button>
->>>>>>> andrews_branch
+
                 </div>
 
             </div>
@@ -416,7 +401,7 @@
             <a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1" id="searchButton">Search</a>
             <br>
             <hr style="color: 000000;">
-<<<<<<< HEAD
+
 
             <div class="widget uib_w_61" data-uib="media/text" data-ver="0">
                 <div class="widget-container left-receptacle">
@@ -490,10 +475,10 @@
                     </p>
                     <p></p>
                 </div>
-=======
+
             <div id="investorsP">
                 <div id="investorList1"></div>
->>>>>>> andrews_branch
+
             </div>
         </div>
 
@@ -511,7 +496,7 @@
 
         <div class="upage vertical-col panel" id="InvestorProfile" data-header="af-header-0" data-footer="none">
             <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
-<<<<<<< HEAD
+
 
                 <div>
 
@@ -551,8 +536,7 @@
 
                 <div class="widget-container right-receptacle"></div>
 
-=======
->>>>>>> andrews_branch
+
                 <div>
                     <p style="margin-left: 15px">Investor Profile</p>
                     <div id="investorCard"></div>
@@ -572,12 +556,12 @@
                             <p id="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
                         </td>
                         <td align="left" style="border:none">
-<<<<<<< HEAD
+
 
                             <p><u><b> <a href="#OppDetails">Cleveland</a></b></u>
-=======
+
                             <p style="font-size: 12px"> <b>Price Range</b> 
->>>>>>> andrews_branch
+
                             </p>
                             <p id="priceRange" contenteditable="true"></p>
                         </td>

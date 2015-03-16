@@ -2,9 +2,9 @@ define([],function(){
         activityPropertySearchButton.addEventListener('click',function(){
             searchProperty(propertyActivity.value);
         });
-       activitySaveButton.addEventListener('click',function(){
+       /*activitySaveButton.addEventListener('click',function(){
             addActivity(propertyActivity, activityAction, activityComment );
-        });
+        });*/
 
 
     function searchProperty(propertyWords){
@@ -24,7 +24,6 @@ define([],function(){
                 alert("invalid property address");}    
         });
     }
-    function addActivity(property, action,comment){
-        url=
+    
     }
 });

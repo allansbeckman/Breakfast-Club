@@ -80,13 +80,7 @@ body {
   align: right;
   border: none;
 }
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-#propertySearchResultPopup{
-display:none;}
-=======
-=======
->>>>>>> andrews_branch
+
 
 .bold{
  font-weight: bold;
@@ -108,11 +102,8 @@ text-decoration: underline;
 .inlineP{
  display: inline;   
 }
-<<<<<<< HEAD
 .hide{
 display: hide}
 #propertySearchResultPopup{
 display:hide;}
->>>>>>> Stashed changes
-=======
->>>>>>> andrews_branch
+
