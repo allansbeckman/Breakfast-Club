@@ -41,8 +41,8 @@ jQuery.ajax({
 
         
 });};
-/*function addActivity(addressID,action,comment){
-    var hilId = "";
+function addActivity(addressID,action,comment){
+    var hilId;
     jQuery.ajax({
             type:"POST",
             url:"http://54.69.150.79:8080/embrace2/hilOpportunityProperty/create",
@@ -51,22 +51,32 @@ jQuery.ajax({
             dataType:"json",
         success: function (data, status, jqXHR){
             hilId = data.hilOpportunityPropertyID;
+        },
+        error: function(status, jqXHR){
+            alert("Error in creating activity");
         }
     });
     var today = new Date();
     var date = today.toISOString().substring(0, 10);
     jQuery.ajax({
         type:"POST",
-        url:"http://54.69.150.79:8080/embrace2/event/create",
+        url:"http://54.69.150.79:8080/embrace2/event/create/",
         data: JSON.stringify({"eventDate":date, 
                               "objectId":hilID,
                               "object":"291",
                               "targetUserID":"sysur4",
                               "eventType":"Activity",
                               "orignatingUserId":"sysur3"}),
+        dataType:"json",
+        success: function(data,status,jqXHR){
+            alert("Activity Created");
+        },
+        error: function(status,jqXHR){
+            alert("Failed to create Activity");
+        }
     });
     
-};*/
+};
 function loadActivityInfo(name, email, phone) {
     activityInvName.innerHTML = name;
     activityInvEmail.innerHTML = email;
