@@ -25,17 +25,48 @@ function propertySearch(address){
 jQuery.ajax({
          type: "POST",
          url: "http://54.69.150.79:8080/embrace2/property/search/",
-    data:{"propertyAddress": "124", "isMobile": "Y"},
+    data: JSON.stringify({"propertyAddress": address.value, "isMobile": "Y"}),
          contentType: "application/json",
          dataType: "json",
          success: function (data, status, jqXHR) {
-         },
-
-         error: function (jqXHR, status) {
-             alert("Invalid Login");
+             var totalProperties = data.iTotalRecords;
+             for(i = 0; i <totalProperties; i++){
+                var opt = document.createElement("option");
+                 opt.text = data.aaData[i].address + " "+ data.aaData[i].city +", "+data.aaData[i].state +" "+data.aaData[i].zip;
+                 opt.value = data.aaData[i].propertyid;
+                 $('#propertySearchResult').append(opt);
+             }
+             $('#propertySearchResultPopup').show();
          }
-});};
 
+        
+});};
+/*function addActivity(addressID,action,comment){
+    var hilId = "";
+    jQuery.ajax({
+            type:"POST",
+            url:"http://54.69.150.79:8080/embrace2/hilOpportunityProperty/create",
+            data: JSON.stringify({"propertyId":addressID,"locationId":"45b5617d-c125-11e4-aaa2-28d2444bf619"}),
+            contentTYpe:"application/application/x-www-form-urlencoded",
+            dataType:"json",
+        success: function (data, status, jqXHR){
+            hilId = data.hilOpportunityPropertyID;
+        }
+    });
+    var today = new Date();
+    var date = today.toISOString().substring(0, 10);
+    jQuery.ajax({
+        type:"POST",
+        url:"http://54.69.150.79:8080/embrace2/event/create",
+        data: JSON.stringify({"eventDate":date, 
+                              "objectId":hilID,
+                              "object":"291",
+                              "targetUserID":"sysur4",
+                              "eventType":"Activity",
+                              "orignatingUserId":"sysur3"}),
+    });
+    
+};*/
 function loadActivityInfo(name, email, phone) {
     activityInvName.innerHTML = name;
     activityInvEmail.innerHTML = email;

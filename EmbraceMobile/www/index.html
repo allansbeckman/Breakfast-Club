@@ -259,8 +259,12 @@
                             margin-right:10px; max-width:100px">Search
                     </button>
                     <script>
-                        propertySearchButton.addEventListener('click', function(event) { propertySearch(propertySearchButton.value); });
+                        propertySearchButton.addEventListener('click', function(event) { propertySearch(propertyActivity.value); });
+                        
                     </script>
+                    <div id="propertySearchResultPopup">
+                        <select id="propertySearchResult"></select>
+                    </div>
                     <br>
                     <p style="margin-left:10px; margin-right:10px">Action:</p>
                     <div>
@@ -282,37 +286,7 @@
                     <textarea name="comment" id="comment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
                     <br>
-                    <script>
-                        function getDate(){
-                            var today = new Date();
-                            var dd = today.getDate();
-                            var mm = today.getMonth()+1; //January is 0!
-                            var yyyy = today.getFullYear();
-
-                            if(dd<10) {
-                                dd='0'+dd
-                                } 
-
-                            if(mm<10) {
-                                mm='0'+mm
-                                } 
-
-                            today = mm+'/'+dd+'/'+yyyy;
-                            return today;
-                        };
-                    $("activitySaveButton").click(function(){
-                        var property = propertyActivity.value;
-                        var action = activityAction.value;
-                        var comment = activityComment.value;
-                        var date = getDate();
-                        var text = '{"opportunityStatus":action,"createdDate": date, "propertyAddress":property,"propertyState":"","propertyZip":"" , "comments":comment}';
-                        var obj = JSON.parse(text);
-                        var fileWriter = new FileWriter("activityList.txt", true);
-                        fileWriter.open();
-                        fileWriter.writeLine(obj);
-                        fileWriter.close();
-                    });
-                    </script>
+                    
                     
                     <button type="submit" value="Save" id ="activitySaveButton"style="float: right;font-family: Verdana, Arial, Helvetica, sans-serif;
                         font-size: 12px;
@@ -322,6 +296,10 @@
                         border-style: solid;
                         border-width: 2px;margin-right:10px;max-width:100px">Save
                     </button>
+                    <!--<script>
+                        activitySaveButton.addEventListener('click', function(event) { addActivity(propertySearchResult.value,activityAction.value,comment.value); });
+                        
+                    </script>-->
                 </div>
 
             </div>
