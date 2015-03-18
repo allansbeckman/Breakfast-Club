@@ -1,4 +1,55 @@
 /*
+      Contains all code related to activities.
+*/
+/*
+    Function to Add an Activity to the activity model.
+    Currently not working because services were not fully implemented.
+*/
+function addActivity(addressID,action,comment){
+    var hilOpportunityId;
+    var select = propertySearchResult;
+    var selectedProp = select
+    console.log(propertySearchResult.selectedIndex);
+    console.log(propertySearchResult[propertySearchResult.selectedIndex]);
+    jQuery.ajax({
+            type:"POST",
+            url:"http://54.69.150.79:8080/embrace2/hilOpportunityProperty/create",
+            data: {"propertyId":addressID,"locationId":window.locationId},
+            contentTYpe:"application/application/x-www-form-urlencoded",
+            dataType:"json",
+        success: function (data, status, jqXHR){
+            console.log("sucess creat hilOpportunity");
+            hilOpportunityId = data.hop.propertyId;
+            console.log("hil " + data.hop.hilOpportunityId);
+        },
+        error: function(status, jqXHR){
+            alert("Error in creating activity");
+        }
+    });
+    var today = new Date();
+    var date = today.toISOString().substring(0, 10);
+    jQuery.ajax({
+        type:"POST",
+        url:"http://54.69.150.79:8080/embrace2/event/create/",
+        data: JSON.stringify({"eventDate":date, 
+                              "objectId":"d7d45dd3-8b23-41ad-83e3-4fae24fcd442",
+                              "object":"291",
+                              "targetUserId":"sysur4",
+                              "eventType":"Activity",
+                              "originatingUserId":"sysur3"}),
+        contentType: "application/json",
+        dataType:"json",
+        success: function(data,status,jqXHR){
+            alert("Activity Created");
+        },
+        error: function(status,jqXHR){
+            alert("Failed to create Activity");
+        }
+    });
+    
+};
+
+/*
     Appends saved activity to my opportunity details.
 */
 function appendActivity() {
