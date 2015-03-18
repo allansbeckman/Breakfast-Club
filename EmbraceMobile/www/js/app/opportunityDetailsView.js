@@ -1,5 +1,7 @@
 define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
 
+
+    
     function renderDetailsList(){
         console.log('render opp details');
         
@@ -16,7 +18,11 @@ define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
             city = opportunity.get('city');
             state = opportunity.get('propertyState');
             opportunity_status = opportunity.get('opportunityStatus');
-            createdDate = opportunity.get('createdDate');
+            timeStamp = opportunity.get('createdDate');
+            var dt = new Date(timeStamp);
+
+            createdDate = (dt.getMonth() + 1) + "/" + dt.getDate() + "/" +  dt.getFullYear();
+            //createdDate = getdhm(timeStamp);
             propertyAddress = opportunity.get('propertyAddress');
             propertyZip = opportunity.get('propertyZip');
             Comments = opportunity.get('comments');

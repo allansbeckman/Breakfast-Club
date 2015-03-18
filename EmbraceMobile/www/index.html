@@ -251,18 +251,18 @@
                     <p style="margin-left:10px;margin-right:10px">Property:</p>
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
                            type="text" class="tftextinput" name="q" size="21" maxlength="120" id="addActivityAddress">
-                    <br>
                     
-                    <a  class="button widget uib_w_139 d-margins" data-uib="app_framework/button" data-ver="1" id="propertySearchButton">Search</a>
+                    <button style="margin-left:10px; margin-right:10px;margin-top:5px;margin-bottom:15px;width:95%;border: 2px solid #000000;height:30px;background-color:white;border-radius: 25px" id ="propertySearchButton">Search</button>
+                    
+                    <!--<a style="margin-top:5px;" class="button widget uib_w_139 d-margins" data-uib="app_framework/button" data-ver="1" id="propertySearchButton">Search</a>-->
                     
                     <script>
                         propertySearchButton.addEventListener('click', function(event) { propertySearch(); });
                         
                     </script>
                     <div id="propertySearchResultPopup">
-                        <select id="propertySearchResult"></select>
+                        <select style="margin-left:10px; margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" id="propertySearchResult"></select>
                     </div>
-                    <br>
                     <p style="margin-left:10px; margin-right:10px">Action:</p>
                     <div>
                         <select style="margin-left:10px; margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" id="activityAction">
@@ -282,10 +282,10 @@
                     <br>
                     <textarea name="comment" id="comment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
-                    <br>
                     
                     
-                    <a href="#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
+                    
+                    <a href="#OppDetails" style="margin-left:10px; margin-right:10px;margin-top:5px;margin-bottom:15px;width:95%;border: 2px solid #000000;height:30px;background-color:white;border-radius: 25px" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--script for adding activity-->
                     <script>
                         activitySaveButton.addEventListener('click', function(event) {appendActivity(); });
