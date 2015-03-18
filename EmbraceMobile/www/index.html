@@ -107,9 +107,11 @@
         <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
         <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
-        
+
         <!-- scripts for variables and universal on click functions-->
-        <script type="text/javascript">window.ilmId = ''</script>
+        <script type="text/javascript">
+            window.ilmId = ''
+        </script>
         <script type="text/javascript">
             window.emailReturnPage = ''
         </script>
@@ -143,21 +145,17 @@
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
 
-        
-           <!--Header with no back button-->
-        <header class="wrapping-col wrap-element uib_w_132" data-uib="app_framework/header" data-ver="2" id="af-header-16" 
-                style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
+        <!--Header with no back button-->
+        <header class="wrapping-col wrap-element uib_w_132" data-uib="app_framework/header" data-ver="2" id="af-header-16" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
         </header>
-        
+
         <!--Header with back button-->
-        <header class="wrapping-col wrap-element uib_w_131 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-0" 
-                style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
+        <header class="wrapping-col wrap-element uib_w_131 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-0" style="background-image: url('images/homeunionEmbraceLogoH.png');  background-size: 100% 100%; background-repeat: no-repeat;">
             <a class="button backButton">
                 <p style="color: #3D9EDD">&lt; Back</p>
             </a>
         </header>
-        
-       
+
         <div id="content" class="uwrap">
             <div class="upage vertical-col panel AppBackground" id="mainpage" data-header="af-header-16" data-footer="none">
 
@@ -168,27 +166,26 @@
                 <div class="table-thing with-label widget uib_w_6 d-margins" data-uib="app_framework/input" data-ver="1">
                     <input class="wide-control" placeholder="Username" type="text" id="username" value="admin">
                 </div>
-                
+
                 <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="app_framework/input" data-ver="1">
                     <input class="wide-control" placeholder="Password" type="password" id="pass" value="password">
                 </div>
-                
+
                 <div class="widget uib_w_8 d-margins" data-uib="app_framework/checkbox" data-ver="1">
                     <input type="checkbox" id="af-checkbox-0">
                     <label class="content-box" for="af-checkbox-0">Remember Me</label>
                 </div>
-                
+
                 <a class="button widget uib_w_4 d-margins" data-uib="app_framework/button" data-ver="1">Login</a>
             </div>
-            
-            
+
             <div class="upage panel AppBackground" id="landingPage" data-header="af-header-0" data-footer="none">
 
                 <div class="upage-outer">
                     <div class="upage-content content-area vertical-col" id="page_70_42">
 
                         <div align="center">
-                            <a href="#MyInvestors" onClick="searchInv()">
+                            <a href="#MyInvestors" onclick="searchInv()">
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 15px; float:center; max-height:64px; max-width:64px" src="images/Investors.png">
                             </a>
 
@@ -197,9 +194,9 @@
                         </div>
 
                         <br>
-                        
+
                         <div align="center">
-                            <a href="#MyOpportunities" onClick="searchOpp()">
+                            <a href="#MyOpportunities" onclick="searchOpp()">
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64px" src="images/opportunities.png">
                             </a>
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/tasklist.png">
@@ -207,7 +204,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Opportunities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task List
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
-                        
+
                         <br>
                         <div align="center">
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64" src="images/messages.png">
@@ -219,14 +216,13 @@
 
                     </div>
 
-                 
                 </div>
-                
+
                 <div class="upage vertical-col left panel" id="Add_Activity" data-header="af-header-0" data-footer="none">
                     <div>
                         <p style="font-size:16px; text-decoration:underline;margin-left:25px;">Activity</p>
                     </div>
-                    
+
                     <table width="300" cellpadding="5">
                         <tbody>
                             <tr>
@@ -242,24 +238,17 @@
 
                         </tbody>
                     </table>
-                    
+
                     <br>
-                    
+
                     <hr style="color: #000000;background-color: #000000;height: 5px;">
                     <br>
-                    
+
                     <p style="margin-left:10px;margin-right:10px">Property:</p>
-                    <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
-                           type="text" class="tftextinput" name="q" size="21" maxlength="120" id="addActivityAddress">
-                    
-                    <button style="margin-left:10px; margin-right:10px;margin-top:5px;margin-bottom:15px;width:95%;border: 2px solid #000000;height:30px;background-color:white;border-radius: 25px" id ="propertySearchButton">Search</button>
-                    
-                    <!--<a style="margin-top:5px;" class="button widget uib_w_139 d-margins" data-uib="app_framework/button" data-ver="1" id="propertySearchButton">Search</a>-->
-                    
-                    <script>
-                        propertySearchButton.addEventListener('click', function(event) { propertySearch(); });
-                        
-                    </script>
+                    <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" type="text" class="tftextinput" name="q" size="21" maxlength="120" id="addActivityAddress">
+
+                    <a style="margin-top:5px;" class="button widget uib_w_139" data-uib="app_framework/button" data-ver="1" id="propertySearchButton">Search</a>
+
                     <div id="propertySearchResultPopup">
                         <select style="margin-left:10px; margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" id="propertySearchResult"></select>
                     </div>
@@ -282,20 +271,14 @@
                     <br>
                     <textarea name="comment" id="comment" style="border: 2px solid #000000;max-height:100px;
                     margin-left:10px; margin-right:10px;max-width:95%;resize: none;" data-role="none" rows="4"></textarea>
-                    
-                    
-                    
-                    <a href="#OppDetails" style="margin-left:10px; margin-right:10px;margin-top:5px;margin-bottom:15px;width:95%;border: 2px solid #000000;height:30px;background-color:white;border-radius: 25px" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
+
+                    <a href="#OppDetails" class="button widget uib_w_138" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--script for adding activity-->
-                    <script>
-                        activitySaveButton.addEventListener('click', function(event) {appendActivity(); });
-                        
-                    </script>
+
                 </div>
 
             </div>
 
-      
             <div class="upage vertical-col panel" id="Email" data-header="af-header-0" data-footer="none">
                 <div class="table-thing with-label widget uib_w_23 d-margins" data-uib="app_framework/input" data-ver="1">
                     <label class="narrow-control label-top-left">To:</label>
@@ -314,186 +297,192 @@
                 </div>
                 <a class="button widget uib_w_27 icon right" data-uib="app_framework/button" data-ver="1">Send</a>
             </div>
-            
-            
-        <script src="js/test.js"></script>
 
-        <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
+            <div class="upage panel vertical-col" id="MyInvestors" data-header="af-header-0" data-footer="none">
 
-            <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
-                <label class="narrow-control label-top-left" for="searchValue">Investors</label>
-                <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchValue">
+                <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="searchValue">Investors</label>
+                    <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchValue">
+                </div>
+                <a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1" id="searchButton">Search</a>
+                <br>
+                <hr style="color: 000000;">
+                <div id="investorsP">
+                    <div id="investorList1"></div>
+                </div>
             </div>
-            <a class="button widget uib_w_137" data-uib="app_framework/button" data-ver="1" id="searchButton">Search</a>
-            <br>
-            <hr style="color: 000000;">
-            <div id="investorsP">
-                <div id="investorList1"></div>
+
+            <div class="upage panel vertical-col" id="MyOpportunities" data-header="af-header-0" data-footer="none">
+
+                <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left" for="searchOppInvValue">Opportunities</label>
+                    <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchOppInvValue">
+                </div><a class="button widget uib_w_138" data-uib="app_framework/button" data-ver="1" id="oppSearch">Search</a>
+                <br>
+                <hr style="color: 000000;">
+                <div id="investorList2"></div>
+
             </div>
-        </div>
 
-        <div class="upage panel vertical-col" id="MyOpportunities" data-header="af-header-0" data-footer="none">
+            <div class="upage vertical-col panel" id="InvestorProfile" data-header="af-header-0" data-footer="none">
+                <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
+                    <div>
+                        <p style="margin-left: 15px">Investor Profile</p>
+                        <div id="investorCard"></div>
+                        <div style="margin-left: 10px" id="investorSolutionSpecialist"></div>
+                    </div>
+                </div>
 
-            <div class="table-thing with-label widget uib_w_122" data-uib="app_framework/input" data-ver="1">
-                <label class="narrow-control label-top-left" for="searchOppInvValue">Opportunities</label>
-                <input class="wide-control" type="text" placeholder="Search by Investor Name" id="searchOppInvValue">
-            </div><a class="button widget uib_w_138" data-uib="app_framework/button" data-ver="1" id="oppSearch">Search</a>
-            <br>
-            <hr style="color: 000000;">
-            <div id="investorList2"></div>
-           
-        </div>
+                <p style="margin-left: 15px; font-size:14px">Investor Breadbox <a align="left" id="breadboxSave">(save)</a>
+                </p>
+                <table border="1px" width="90%" style=" margin-left: 15px; margin-right: 15px; border-radius: 5px">
 
-        <div class="upage vertical-col panel" id="InvestorProfile" data-header="af-header-0" data-footer="none">
-            <div class="widget uib_w_3 Title" data-uib="media/text" data-ver="0">
+                    <tbody>
+                        <tr>
+                            <td align="left" style="border:none; margin-left: 15px">
+                                <p style="margin-left: 5px; font-size: 12px"><b>Investment Amount</b>
+                                </p>
+                                <p id="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
+                            </td>
+                            <td align="left" style="border:none">
+                                <p style="font-size: 12px"> <b>Price Range</b> 
+                                </p>
+                                <p id="priceRange" contenteditable="true"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border:none; margin-left: 15px">
+                                <p style="margin-left: 5px; font-size: 12px"><b>Buying time frame</b>
+                                </p>
+                                <p id="buyingTimeFrame" contenteditable="true" style="margin-left: 5px"></p>
+                            </td>
+                            <td align="left" style="border:none">
+                                <p style="font-size: 12px"> <b>Location</b> 
+                                </p>
+                                <p id="breadboxLocation" contenteditable="true"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="border:none; margin-left: 15px">
+                                <p style="margin-left: 5px; font-size: 12px"><b>Pre-approved?</b>
+                                </p>
+                                <p id="preApproved" contenteditable="true" style="margin-left: 5px"></p>
+                            </td>
+                            <td align="left" style="border:none">
+                                <p style="font-size: 12px"> <b>CAP rate range</b> 
+                                </p>
+                                <p id="capRateRange" contenteditable="true"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left" style="border:none; margin-left: 15px">
+                                <p style="margin-left: 5px; font-size: 12px"><b>Comments</b>
+                                </p>
+                                <p id="breadboxComments" contenteditable="true" style="margin-left: 5px"></p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <p style="margin-left: 15px; font-size: 14px">Investment Locations</p>
+
+                <table border="1px" width="90%" style=" margin-left: 15px; border-radius: 5px">
+
+                    <tbody id="detailsBody">
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-0" data-footer="none">
                 <div>
-                    <p style="margin-left: 15px">Investor Profile</p>
-                    <div id="investorCard"></div>
-                    <div style="margin-left: 10px" id="investorSolutionSpecialist"></div>
+                    <p style="margin-left:6px">Opportunity Details</p>
                 </div>
+                <table width="300" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="center">
+                                <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
+                            </td>
+                            <td align="left" valign="left">
+                                <p id="oppDetailsName" style="margin-left:25px;font-size:12px"></p>
+                                <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px"></p>
+                                <a id="oppDetailsEmail" href="#Email">
+                                    <p id="investOppEmail" style="margin-left:25px;font-size:12px"></p>
+
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <p style="margin-left:6px">Investment Location: Cleveland</p>
+                </div>
+
+                <hr style="color: #000000;background-color: #000000;height: 5px;">
+
+                <table width="300" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td align="left" valign="center">
+                                <p style="margin-left:25px;font-size:16px">Activities</p>
+                            </td>
+                            <td align="right" valign="left">
+                                <a id="OppDetailsAddActivity" href="#Add_Activity" data-transition="fade">
+
+                                    <img style="height:32px; width:32px;" src="images/plus_button.svg" border="0">
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr style="color: #000000;background-color: #000000;height: 5px;">
+
+                <br>
+
+                <div id="oppDetailsClick">
+                    <div id="oppDetailsInfo">
+                        <table id="activityTable">
+                        </table>
+
+                    </div>
+                </div>
+                <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
+
             </div>
-
-            <p style="margin-left: 15px; font-size:14px">Investor Breadbox <a align="left" id="breadboxSave">(save)</a>
-            </p>
-            <table border="1px" width="90%" style=" margin-left: 15px; margin-right: 15px; border-radius: 5px">
-
-                <tbody>
-                    <tr>
-                        <td align="left" style="border:none; margin-left: 15px">
-                            <p style="margin-left: 5px; font-size: 12px"><b>Investment Amount</b>
-                            </p>
-                            <p id="investmentAmount" contenteditable="true" style="margin-left: 5px"></p>
-                        </td>
-                        <td align="left" style="border:none">
-                            <p style="font-size: 12px"> <b>Price Range</b> 
-                            </p>
-                            <p id="priceRange" contenteditable="true"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="border:none; margin-left: 15px">
-                            <p style="margin-left: 5px; font-size: 12px"><b>Buying time frame</b>
-                            </p>
-                            <p id="buyingTimeFrame" contenteditable="true" style="margin-left: 5px"></p>
-                        </td>
-                        <td align="left" style="border:none">
-                            <p style="font-size: 12px"> <b>Location</b> 
-                            </p>
-                            <p id="breadboxLocation" contenteditable="true"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="border:none; margin-left: 15px">
-                            <p style="margin-left: 5px; font-size: 12px"><b>Pre-approved?</b>
-                            </p>
-                            <p id="preApproved" contenteditable="true" style="margin-left: 5px"></p>
-                        </td>
-                        <td align="left" style="border:none">
-                            <p style="font-size: 12px"> <b>CAP rate range</b> 
-                            </p>
-                            <p id="capRateRange" contenteditable="true"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="left" style="border:none; margin-left: 15px">
-                            <p style="margin-left: 5px; font-size: 12px"><b>Comments</b>
-                            </p>
-                            <p id="breadboxComments" contenteditable="true" style="margin-left: 5px"></p>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-            <p style="margin-left: 15px; font-size: 14px">Investment Locations</p>
-
-            <table border="1px" width="90%" style=" margin-left: 15px; border-radius: 5px">
-
-                <tbody id="detailsBody">
-
-                </tbody>
-            </table>
 
         </div>
-
-        <div class="upage vertical-col panel" id="OppDetails" data-header="af-header-0" data-footer="none">
-            <div>
-                <p style="margin-left:6px">Opportunity Details</p>
-            </div>
-            <table width="300" cellpadding="5">
-                <tbody>
-                    <tr>
-                        <td align="center" valign="center">
-                            <img src="images/Investors.png" height="64" style="margin-left:25px;" width="64" border="1px">
-                        </td>
-                        <td align="left" valign="left">
-                            <p id="oppDetailsName" style="margin-left:25px;font-size:12px"></p>
-                            <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px"></p>
-                            <a id="oppDetailsEmail" href="#Email">
-                                <p id="investOppEmail" style="margin-left:25px;font-size:12px"></p>
-                                
-                            </a>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <p style="margin-left:6px">Investment Location: Cleveland</p>
-            </div>
-
-            <hr style="color: #000000;background-color: #000000;height: 5px;">
-
-            <table width="300" cellpadding="5">
-                <tbody>
-                    <tr>
-                        <td align="left" valign="center">
-                            <p style="margin-left:25px;font-size:16px">Activities</p>
-                        </td>
-                        <td align="right" valign="left">
-                            <a id="OppDetailsAddActivity" href="#Add_Activity" data-transition="fade">
-                                <script type="text/javascript">
-                                    document.getElementById("OppDetailsAddActivity").addEventListener('click', function(event) { clearActivity();
-                                    });
-                                </script>
-                                <img style="height:32px; width:32px;" src="images/plus_button.svg" border="0">
-                            </a>
-                            <script type="text/javascript">
-                                OppDetailsAddActivity.addEventListener('click', function(event) {
-                                loadActivityInfo(oppDetailsName.innerHTML, investOppEmail.innerHTML, oppDetailsNumber.innerHTML); });
-                            </script>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr style="color: #000000;background-color: #000000;height: 5px;">
-
-            <br>
-
-            <div id="oppDetailsClick">
-                <div id="oppDetailsInfo">
-                   <table id="activityTable" >
-                    </table>
-                
-                </div>
-            </div>
-            <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
-
-        </div>
+        <script>
+            propertySearchButton.addEventListener('click', function(event) { propertySearch(); });
+        </script>
+        <script>
+            activitySaveButton.addEventListener('click', function(event) {appendActivity(); });
+        </script>
+        <script src="js/test.js"></script>
         <script type="text/javascript">
-                document.getElementById('oppDetailsEmail').addEventListener('click', function(event) 
+            document.getElementById("OppDetailsAddActivity").addEventListener('click', function(event) { clearActivity();
+                                    });
+        </script>
+        <script type="text/javascript">
+            OppDetailsAddActivity.addEventListener('click', function(event) {
+                                loadActivityInfo(oppDetailsName.innerHTML, investOppEmail.innerHTML, oppDetailsNumber.innerHTML); });
+        </script>
+        <script type="text/javascript">
+            document.getElementById('oppDetailsEmail').addEventListener('click', function(event) 
                                                                                                     {
                     document.getElementById('emailTo').value = document.getElementById('investOppEmail').innerHTML;
                     window.emailReturnPage = '#OppDetails';
                 });
         </script>
-
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/underscore.js"></script>
         <script src="js/lib/backbone.js"></script>
         <script src="js/lib/keyboard.js"></script>
         <script data-main="js/app.js" src="js/lib/require.js"></script>
-
         <script>
             require.config({
                 urlArgs: "bust=" +  (new Date()).getTime()
