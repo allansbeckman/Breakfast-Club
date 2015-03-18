@@ -216,7 +216,12 @@ function renderInvestorOppLink(investor) {
     
 };
 
-
+function clearActivity(){
+    addActivityAddress.value = "";
+    propertySearchResult.length = 0;
+    comment.value = "";
+    activityAction.selectedIndex = 0;
+};
 
 function searchInv(){
     console.log("searching from investors");

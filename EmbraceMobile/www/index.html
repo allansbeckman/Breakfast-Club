@@ -434,6 +434,7 @@
                             <p id="oppDetailsNumber" style="margin-left:25px;font-size:12px"></p>
                             <a id="oppDetailsEmail" href="#Email">
                                 <p id="investOppEmail" style="margin-left:25px;font-size:12px"></p>
+                                
                             </a>
 
                         </td>
@@ -454,6 +455,10 @@
                         </td>
                         <td align="right" valign="left">
                             <a id="OppDetailsAddActivity" href="#Add_Activity" data-transition="fade">
+                                <script type="text/javascript">
+                                    document.getElementById("OppDetailsAddActivity").addEventListener('click', function(event) { clearActivity();
+                                    });
+                                </script>
                                 <img style="height:32px; width:32px;" src="images/plus_button.svg" border="0">
                             </a>
                             <script type="text/javascript">
