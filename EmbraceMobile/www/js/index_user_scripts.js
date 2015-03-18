@@ -49,6 +49,9 @@ $(window).bind('setup', function() {
             link.href = window.emailReturnPage;
             Email.appendChild(link);
             link.click(); 
+            emailSubject.value = "";
+            emailMessage.value = "";
+            emailTo.value = "";
         },
     error: function (jqXHR, status) {
              // error handler
@@ -56,6 +59,9 @@ $(window).bind('setup', function() {
             link.href = window.emailReturnPage;
             Email.appendChild(link);
             link.click(); 
+            emailSubject.value = "";
+            emailMessage.value = "";
+            emailTo.value = "";
 }
     })});
     
