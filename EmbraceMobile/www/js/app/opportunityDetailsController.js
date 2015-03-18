@@ -1,3 +1,6 @@
+/*
+    Controller for opportunity details.
+*/
  define(['app/opportunityDetailsModel', 'app/opportunityDetails'], function(opportunityDetailsModel, opportunityDetails){
      
      investorList2.addEventListener('click', function(){

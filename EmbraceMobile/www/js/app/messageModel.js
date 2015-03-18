@@ -1,3 +1,6 @@
+/*
+    Model for emails.
+*/
 define(['app/messageModel'], function(messageModel){
     var c = canvas;
     function render(){

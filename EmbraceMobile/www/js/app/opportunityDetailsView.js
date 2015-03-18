@@ -1,3 +1,6 @@
+/*
+    View for opportunity details.
+*/
 define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
 
 

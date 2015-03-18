@@ -1,3 +1,6 @@
+/*
+    View for Investor Profile.
+*/
 define(['app/investorModel'], function(investorModel){
 
     

@@ -1,3 +1,6 @@
+/*
+	Collection for investor profile.
+*/
 define(['app/Investor'], function(Investor){
   var Investors = Backbone.Collection.extend({
   model: Investor

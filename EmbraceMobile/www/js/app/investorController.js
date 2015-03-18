@@ -1,3 +1,6 @@
+/*
+  Controller for Investor Profile
+*/
  define(['app/investorModel', 'app/Investor'], function(investorModel, Investor){
  
      investorsP.addEventListener('click', function(){
