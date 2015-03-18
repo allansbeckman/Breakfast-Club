@@ -32,6 +32,7 @@ $(window).bind('setup', function() {
     });
     
         /* button  Send */
+        /* Email Button Click */
     $(document).on("click", ".uib_w_27", function(evt)
     {
         var mailTo = emailTo.value;
@@ -66,18 +67,21 @@ $(window).bind('setup', function() {
     })});
     
         /* button  Login */
+        /* Login button click*/
     $(document).on("click", ".uib_w_4", function(evt)
     {
         login(username.value, pass.value);
     });
      
             /* button  #searchButton */
+            /* Search Investor Button Click */
     $(document).on("click", "#searchButton", function(evt)
     {
         searchInv();
     });
     
         /* button  #oppSearch */
+        /* Search Opportunity Button Click */
     $(document).on("click", "#oppSearch", function(evt)
     {
         searchOpp();
