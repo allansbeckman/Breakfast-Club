@@ -47,7 +47,7 @@ jQuery.ajax({
         
 });};
 function addActivity(addressID,action,comment){
-    var hilId;
+    var hilOpportunityId;
     var select = propertySearchResult;
     var selectedProp = select
     console.log(propertySearchResult.selectedIndex);
@@ -59,8 +59,8 @@ function addActivity(addressID,action,comment){
             contentTYpe:"application/application/x-www-form-urlencoded",
             dataType:"json",
         success: function (data, status, jqXHR){
-            console.log("sucess creat ilm");
-            hilId = data.hop.hilOpportunityId;
+            console.log("sucess creat hilOpportunity");
+            hilOpportunityId = data.hop.propertyId;
             console.log("hil " + data.hop.hilOpportunityId);
         },
         error: function(status, jqXHR){
@@ -73,11 +73,12 @@ function addActivity(addressID,action,comment){
         type:"POST",
         url:"http://54.69.150.79:8080/embrace2/event/create/",
         data: JSON.stringify({"eventDate":date, 
-                              "objectId":hilId,
+                              "objectId":"d7d45dd3-8b23-41ad-83e3-4fae24fcd442",
                               "object":"291",
-                              "targetUserID":"sysur4",
+                              "targetUserId":"sysur4",
                               "eventType":"Activity",
-                              "orignatingUserId":"sysur3"}),
+                              "originatingUserId":"sysur3"}),
+        contentType: "application/json",
         dataType:"json",
         success: function(data,status,jqXHR){
             alert("Activity Created");
