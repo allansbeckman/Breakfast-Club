@@ -1,4 +1,9 @@
 
+    
+    function addActivity(){
+        console.log('add activity called');
+    };
+    
 function login(name, pw){
 jQuery.ajax({
          type: "POST",
