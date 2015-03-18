@@ -31,7 +31,24 @@
      
       function loadOpportunityDetails(investorId, locationId){
           opportunityDetailsModel.reset();
-          jQuery.ajax({
+          console.log('load activities from json');
+          $.getJSON("oppDetails.json", function(data){
+             
+            $.each(data.aaData, function(arrayIndex, activity){ 
+             opportunityDetailsModel.add(new opportunityDetails({
+                 opportunityStatus: activity.activityType,
+                 createdDate: activity.createdDate,
+                 propertyAddress: activity.propertyAddress,
+                 propertyState: activity.propertyState,
+                 propertyZip: activity.propertyZip,
+                 city: activity.propertyCity,
+                 comments: activity.comments
+             }));
+            
+       });
+	   });
+          
+          /*jQuery.ajax({
          type: "POST",
          url:
 "http://54.69.150.79:8080/embrace2/opportunity/activities/investor/" + investorId + "/location/" + locationId,
@@ -57,5 +74,5 @@
          error: function (jqXHR, status) {
              // error handler
              console.log(status);
-         }});}
-});
+         }});}*/
+}});

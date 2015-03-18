@@ -1,7 +1,14 @@
 define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
 
     function renderDetailsList(){
-        oppDetailsInfo.innerHTML = "";
+        console.log('render opp details');
+        
+        //var activityTable = document.createElement('table');
+        activityTable.innerHTML = "";
+        
+        activityTable.setAttribute('border', '1px');
+        activityTable.setAttribute('width', '100%');
+        activityTable.style.borderCollapse = "collapse";
         var newDiv = document.createElement("div");
         var tableBody = document.createElement('tbody');
         

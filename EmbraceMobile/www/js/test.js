@@ -243,6 +243,7 @@ function searchInv(){
 
 function appendActivity() {
      var newDiv = document.createElement("div");
+    console.log('appending activity');
         var tableBody = document.createElement('tbody');
             
             var info = propertySearchResult[propertySearchResult.selectedIndex];

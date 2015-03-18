@@ -1,0 +1,28 @@
+{ 
+"statusCode": "200",
+"message": "OK",
+"iTotalRecords": 2,
+"iTotalDisplayRecords": null,
+"iDisplayLength": null,
+"aaData": 
+[ 
+	{ "eventId": "9578452e-c3cf-11e4-b474-023e45beec19", 
+	  "activityType": "Counter Offer Received", "createdDate": 1425625706000,
+	  "propertyAddress": "20613 Hillgrove", 
+	  "propertyCity": "Maple Heights", 
+	  "propertyState": "OH", "propertyZip": "44137",
+	  "comments": "Offer submitted to seller agent. It is $10k higher than asking price so is expected to be accepted"
+	},
+
+	{ 
+	"eventId": "957845c4-c3cf-11e4-b474-023e45beec19",
+	  "activityType": "Offer Accepted",
+	  "createdDate": 1425625706000,
+	  "propertyAddress": "20613 Hillgrove",
+	  "propertyCity": "Maple Heights",
+	  "propertyState": "OH",
+	  "propertyZip": "44137",
+	  "comments": "Offer accepted by seller."
+	}
+]
+}

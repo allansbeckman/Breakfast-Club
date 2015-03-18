@@ -288,12 +288,10 @@
                     <br>
                     
                     
-                    <a  class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
+                    <a href="#OppDetails" class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--script for adding activity-->
                     <script>
-                        activitySaveButton.addEventListener('click', function(event) { addActivity(propertySearchResult.value,activityAction.value,comment.value);
-                                                                                      //appendActivity(); 
-                                                                                     });
+                        activitySaveButton.addEventListener('click', function(event) {appendActivity(); });
                         
                     </script>
                 </div>
@@ -472,9 +470,7 @@
 
             <div id="oppDetailsClick">
                 <div id="oppDetailsInfo">
-                    <table id="activityTable" style="border: 1px; width: 100%; border-collapse: collapse" >
-                    
-                    
+                   <table id="activityTable" >
                     </table>
                 
                 </div>
