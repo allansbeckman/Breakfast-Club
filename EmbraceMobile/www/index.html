@@ -188,7 +188,7 @@
                     <div class="upage-content content-area vertical-col" id="page_70_42">
 
                         <div align="center">
-                            <a href="#MyInvestors">
+                            <a href="#MyInvestors" onClick="searchInv()">
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 15px; float:center; max-height:64px; max-width:64px" src="images/Investors.png">
                             </a>
 
@@ -199,7 +199,7 @@
                         <br>
                         
                         <div align="center">
-                            <a href="#MyOpportunities">
+                            <a href="#MyOpportunities" onClick="searchOpp()">
                                 <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-height:64px; max-width:64px" src="images/opportunities.png">
                             </a>
                             <img style="margin-left:25px; margin-right:25px; margin-top: 0px; float:center; max-heght:64px; max-width:64px" src="images/tasklist.png">
@@ -250,7 +250,7 @@
                     
                     <p style="margin-left:10px;margin-right:10px">Property:</p>
                     <input style="margin-left:10px;margin-right:10px;max-width:95%;border: 2px solid #000000;height:50px" 
-                           type="text" class="tftextinput" name="q" size="21" maxlength="120" id="propertyActivity">
+                           type="text" class="tftextinput" name="q" size="21" maxlength="120" id="addActivityAddress">
                     <br>
                     
                     <button id="propertySearchButton" type="submit" value="Search" 
@@ -259,7 +259,7 @@
                             margin-right:10px; max-width:100px">Search
                     </button>
                     <script>
-                        propertySearchButton.addEventListener('click', function(event) { propertySearch(propertyActivity.value); });
+                        propertySearchButton.addEventListener('click', function(event) { propertySearch(); });
                         
                     </script>
                     <div id="propertySearchResultPopup">
@@ -291,7 +291,9 @@
                     <a  class="button widget uib_w_138 d-margins" data-uib="app_framework/button" data-ver="1" id="activitySaveButton">Save</a>
                     <!--script for adding activity-->
                     <script>
-                        activitySaveButton.addEventListener('click', function(event) { addActivity(propertySearchResult.value,activityAction.value,comment.value); });
+                        activitySaveButton.addEventListener('click', function(event) { addActivity(propertySearchResult.value,activityAction.value,comment.value);
+                                                                                      //appendActivity(); 
+                                                                                     });
                         
                     </script>
                 </div>
@@ -469,7 +471,13 @@
             <br>
 
             <div id="oppDetailsClick">
-                <div id="oppDetailsInfo"></div>
+                <div id="oppDetailsInfo">
+                    <table id="activityTable" style="border: 1px; width: 100%; border-collapse: collapse" >
+                    
+                    
+                    </table>
+                
+                </div>
             </div>
             <a class="button widget uib_w_34 d-margins ViewMore" data-uib="app_framework/button" data-="" ver="1">View more...</a>
 

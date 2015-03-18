@@ -3,11 +3,6 @@ define(['app/opportunityDetailsModel'], function(opportunityDetailsModel){
     function renderDetailsList(){
         oppDetailsInfo.innerHTML = "";
         var newDiv = document.createElement("div");
-        
-        var activityTable = document.createElement('table');
-        activityTable.setAttribute('border', '1px');
-        activityTable.setAttribute('width', '100%');
-        activityTable.style.borderCollapse = "collapse";
         var tableBody = document.createElement('tbody');
         
         opportunityDetailsModel.each(function(opportunity) {
